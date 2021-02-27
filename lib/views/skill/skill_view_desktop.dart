@@ -71,10 +71,3 @@ class SkillContentDesktop extends StatelessWidget {
     );
   }
 }
-
-void fact() {
-  print(
-      "My name is maulik khandelwal and i am the best in the whole fucking world.");
-  print(
-      "My name is Maulik Khandelwal and I am the BEST in the whole fucking World!");
-}

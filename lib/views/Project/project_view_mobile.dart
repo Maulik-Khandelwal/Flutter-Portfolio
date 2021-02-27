@@ -70,7 +70,8 @@ class Projects extends StatelessWidget {
       ),
       MobileProject(
         ontab: () {
-          method.launchURL("https://github.com/SatYu26/Pinged");
+          method
+              .launchURL("https://github.com/Maulik-Khandelwal/Quiz-Maker-App");
         },
         image: "assets/Quiz Maker.png",
         projectname: 'Quiz Maker',
@@ -80,7 +81,8 @@ class Projects extends StatelessWidget {
       ),
       MobileProject(
         ontab: () {
-          method.launchURL("https://github.com/SatYu26/Flutter-Training-App");
+          method.launchURL(
+              "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter");
         },
         image: "assets/Memory Game.png",
         projectname: 'Flutter Memory Game',
@@ -90,7 +92,8 @@ class Projects extends StatelessWidget {
       ),
       MobileProject(
         ontab: () {
-          method.launchURL("https://github.com/SatYu26/Flutter-ChatApp");
+          method.launchURL(
+              "https://github.com/Maulik-Khandelwal/PyGame-Snake-Game");
         },
         image: "assets/Snake.png",
         projectname: "Snake Game",
@@ -100,7 +103,8 @@ class Projects extends StatelessWidget {
       ),
       MobileProject(
         ontab: () {
-          method.launchURL("https://github.com/SatYu26/Flutter-ChatApp");
+          method.launchURL(
+              "https://github.com/Maulik-Khandelwal/Flutter-Portfolio");
         },
         image: "assets/portfolio.png",
         projectname: 'Portfolio web app',

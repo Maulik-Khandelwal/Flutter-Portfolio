@@ -74,41 +74,6 @@ class Projects extends StatelessWidget {
           height: size.height * 0.04,
         ),
         FeatureProject(
-          imagePath: "assets/Quiz Maker.png",
-          ontab: () {
-            method.launchURL("https://github.com/SatYu26/Pinged");
-          },
-          projectDesc:
-              "Practice Quiz Maker App is a simple and user-friendly mobile application made using flutter API for creating and sharing quizzes, all with beautiful UI.",
-          projectTitle: "Practice Quiz Maker",
-          tech1: "Flutter",
-          tech2: "Dart",
-          tech3: "Mobile App Development",
-        ),
-        FeatureProjectInverted(
-          imagePath: "assets/Memory Game.png",
-          ontab: () {
-            method.launchURL("https://github.com/SatYu26/Flutter-Training-App");
-          },
-          projectDesc: "A Memory Game made using Flutter",
-          projectTitle: "Flutter Memory Game",
-          tech1: "Flutter",
-          tech2: "Dart",
-          tech3: "Mobile App Development",
-        ),
-        FeatureProject(
-          imagePath: "assets/Snake.png",
-          ontab: () {
-            method.launchURL(
-                "https://github.com/SatYu26/Hand-Gesture-Classifier-With-Tensorflow.js");
-          },
-          projectDesc: "A snake game made using PyGame with Python.",
-          projectTitle: "Snake Game",
-          tech1: "Python",
-          tech2: "PyGame",
-          tech3: "Game",
-        ),
-        FeatureProjectInverted(
           imagePath: "assets/portfolio.png",
           ontab: () {
             method.launchURL(
@@ -120,7 +85,7 @@ class Projects extends StatelessWidget {
           tech2: "Dart",
           tech3: "Flutter Web",
         ),
-        FeatureProject(
+        FeatureProjectInverted(
           imagePath: "assets/ascii.png",
           ontab: () {
             method.launchURL(
@@ -131,6 +96,43 @@ class Projects extends StatelessWidget {
           tech1: "Python",
           tech2: "PIL",
           tech3: "Image processing",
+        ),
+        FeatureProject(
+          imagePath: "assets/Quiz Maker.png",
+          ontab: () {
+            method.launchURL(
+                "https://github.com/Maulik-Khandelwal/Quiz-Maker-App");
+          },
+          projectDesc:
+              "Practice Quiz Maker App is a simple and user-friendly mobile application made using flutter API for creating and sharing quizzes, all with beautiful UI.",
+          projectTitle: "Practice Quiz Maker",
+          tech1: "Flutter",
+          tech2: "Dart",
+          tech3: "Mobile App Development",
+        ),
+        FeatureProjectInverted(
+          imagePath: "assets/Memory Game.png",
+          ontab: () {
+            method.launchURL(
+                "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter");
+          },
+          projectDesc: "A Memory Game made using Flutter",
+          projectTitle: "Flutter Memory Game",
+          tech1: "Flutter",
+          tech2: "Dart",
+          tech3: "Mobile App Development",
+        ),
+        FeatureProject(
+          imagePath: "assets/Snake.png",
+          ontab: () {
+            method.launchURL(
+                "https://github.com/Maulik-Khandelwal/PyGame-Snake-Game");
+          },
+          projectDesc: "A snake game made using PyGame with Python.",
+          projectTitle: "Snake Game",
+          tech1: "Python",
+          tech2: "PyGame",
+          tech3: "Game",
         ),
         // FeatureProject(
         //   imagePath: "assets/Alert.jpg",

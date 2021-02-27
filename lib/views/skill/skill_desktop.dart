@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
@@ -186,7 +187,7 @@ class SkillsLogoDesk extends StatelessWidget {
                   width: 80,
                   height: 80,
                   child: Icon(
-                    FontAwesomeIcons.python,
+                    FontAwesomeIcons.laptopCode,
                     size: 60,
                     color: Color(0xff717C99),
                   )),
@@ -197,7 +198,7 @@ class SkillsLogoDesk extends StatelessWidget {
                   width: 80,
                   height: 80,
                   child: Icon(
-                    FontAwesomeIcons.gamepad,
+                    FontAwesomeIcons.python,
                     size: 60,
                     color: Color(0xff717C99),
                   )),
@@ -230,7 +231,7 @@ class SkillsLogoDesk extends StatelessWidget {
                   width: 80,
                   height: 80,
                   child: Icon(
-                    FontAwesomeIcons.baseballBall,
+                    MaterialCommunityIcons.language_cpp,
                     size: 60,
                     color: Color(0xff717C99),
                   )),
@@ -265,7 +266,7 @@ class SkillsLogoDesk extends StatelessWidget {
                   width: 80,
                   height: 80,
                   child: Icon(
-                    FontAwesomeIcons.teamspeak,
+                    FontAwesomeIcons.java,
                     size: 60,
                     color: Color(0xff717C99),
                   )),

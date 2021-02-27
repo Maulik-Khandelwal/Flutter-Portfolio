@@ -43,7 +43,7 @@ class FeatureProjectInverted extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20.0),
                     child: Container(
                       height: (size.height + size.width) * 0.153,
-                      width: size.width * 0.5,
+                      width: size.width * 0.46,
                       //color: Colors.redAccent,
                       child: Image(
                         fit: BoxFit.fill,
@@ -62,22 +62,18 @@ class FeatureProjectInverted extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       height: size.height * 0.18,
-                      width: size.width * 0.50,
+                      width: size.width * 0.40,
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.vertical(bottom: Radius.circular(16)),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            // Color(0xFF7A7A7A),
-                            // Color(0xFF616161),
-                            Color(0xFF4A4A4A).withOpacity(0.95),
-                            Color(0xFF333333).withOpacity(0.95),
-                            Color(0xFF1E1E1E).withOpacity(0.95),
-                            Color(0xFF050505).withOpacity(0.95),
-                          ],
-                        ),
+                        color: Color(0xFF1E1E1E).withOpacity(0.95),
+
+                        // Color(0xFF7A7A7A),
+                        // Color(0xFF616161),
+                        // Color(0xFF4A4A4A).withOpacity(0.95),
+                        // Color(0xFF333333).withOpacity(0.95),
+
+                        // Color(0xFF050505).withOpacity(0.95),
                       ),
                       child: Wrap(
                         alignment: WrapAlignment.center,

@@ -51,8 +51,8 @@ class MyPicWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   // color: Color(0xFF616161).withOpacity(0)
                   gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
                     colors: [
                       // Color(0xFF7A7A7A),
                       // Color(0xFF616161),
@@ -78,7 +78,7 @@ class MyPicWidget extends StatelessWidget {
               color: Colors.black54,
               child: Image(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/MyPic.gif"),
+                image: AssetImage("assets/hack.jpg"),
               ),
             ),
           ),
