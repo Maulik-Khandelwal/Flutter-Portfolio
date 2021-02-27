@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -9,7 +10,7 @@ class IntroductionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.75;
-    double c_height = MediaQuery.of(context).size.height * 1.3;
+    double c_height = MediaQuery.of(context).size.height * 0.8;
     return Container(
       height: c_height,
       width: c_width,
@@ -33,12 +34,14 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final introWidget =
-        "BELIEVE IN YOURSELF!\nThe only way to DISCOVER the limits of the POSSIBLE is to go beyond them into the IMPOSSIBLE.\n"
-                // "I am a 2nd Year Computer Engineering undergraduate from Vishwakarma Institute of Technology, Pune.\n"
-                "I am Your friendly Neighbourhood Developer and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel.\n"
+        // "BELIEVE IN YOURSELF!\nThe only way to DISCOVER the limits of the POSSIBLE is to go beyond them into the IMPOSSIBLE.\n"
+        "Hello! I'am Maulik Khandelwal.\n"
+                "I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune.\n"
+                "I am Software Developer who is passionate about creating technology to elevate people, and building community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel.\n"
             .text
             .white
-            .xl2
+            .size(19)
+            .textStyle(GoogleFonts.rajdhani())
             .maxLines(15)
             .make()
             .w(context.isMobile
@@ -48,15 +51,22 @@ class Introduction extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         addAutomaticKeepAlives: true,
         children: <Widget>[
-          " - Introduction".text.gray500.widest.sm.make(),
+          "- Introduction".text.gray500.widest.sm.make(),
           SizedBox(
             height: 20,
           ),
-          CustomText(
-            text: "I build things for Android and Web.",
-            textsize: 30.0,
-            color: Color(0xffCCD6F6).withOpacity(0.6),
-            fontWeight: FontWeight.w700,
+          "I want to make things that make a difference."
+              .text
+              .color(
+                Color(0xffCCD6F6).withOpacity(0.6),
+              )
+              .size(25)
+              .textStyle(GoogleFonts.rajdhani())
+              .maxLines(2)
+              .bold
+              .make(),
+          SizedBox(
+            height: 15,
           ),
           introWidget,
           SizedBox(
@@ -91,7 +101,12 @@ class Introduction extends StatelessWidget {
                   shape: Vx.roundedSm,
                   color: Coolors.accentColor,
                   textColor: Coolors.primaryColor,
-                  child: "Resume".text.make(),
+                  child: "Resume"
+                      .text
+                      .bold
+                      .size(16)
+                      .textStyle(GoogleFonts.rajdhani())
+                      .make(),
                 ).h(50),
               ),
             ],

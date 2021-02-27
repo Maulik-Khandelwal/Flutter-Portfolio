@@ -16,16 +16,18 @@ class NavigationDrawerHeader extends StatelessWidget {
           colors: [
             // Color(0xFF7A7A7A),
             // Color(0xFF616161),
-            Color(0xFF3D3D3D),
-            Color(0xFF333333),
+            Color(0xFF3D3D3D).withOpacity(0),
+            Color(0xFF333333).withOpacity(0),
           ],
         ),
       ),
       alignment: Alignment.center,
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        // mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          DrawerLogo(),
+          Center(child: DrawerLogo()),
         ],
       ),
     );

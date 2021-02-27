@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         accentColor: Coolors.secondaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: GoogleFonts.poppinsTextTheme(),
+        // textTheme: GoogleFonts.poppinsTextTheme()
       ),
       home: LayoutTemplate(),
     );

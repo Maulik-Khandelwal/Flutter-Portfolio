@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -11,15 +12,17 @@ class NameWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.5;
-    double c_height = MediaQuery.of(context).size.height * 0.55;
+    double c_height = MediaQuery.of(context).size.height * 0.51;
 
     final SNameWidget = "Maulik\nKhandelwal."
         .text
         .white
-        .xl6
-        .lineHeight(1)
+        .xl4
+        // .textStyle(GoogleFonts.cormorantGaramond())
+        .textStyle(GoogleFonts.pressStart2p())
+        .lineHeight(1.4)
         .size(context.isMobile ? 15 : 20)
-        .bold
+        // .bold
         .make()
         .shimmer();
 
@@ -89,7 +92,7 @@ class SocialAccounts extends StatelessWidget {
     return [
       Icon(
         AntDesign.mail,
-        color: Colors.white,
+        color: Coolors.accentColor,
       )
           .mdClick(() {
             launch("mailto:kmaulik07@gmail.com");
@@ -99,7 +102,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.twitter,
-        color: Colors.white,
+        color: Coolors.accentColor,
       )
           .mdClick(() {
             launch("https://twitter.com/i_am_Maulik_K?s=09");
@@ -109,7 +112,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.instagram,
-        color: Colors.white,
+        color: Coolors.accentColor,
       )
           .mdClick(() {
             launch("https://www.instagram.com/maulik_khandelwal/");
@@ -119,7 +122,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.linkedin_square,
-        color: Colors.white,
+        color: Coolors.accentColor,
       )
           .mdClick(() {
             launch("https://www.linkedin.com/in/maulik-khandelwal-6142b51b0/");
@@ -129,7 +132,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.github,
-        color: Colors.white,
+        color: Coolors.accentColor,
       )
           .mdClick(() {
             launch("https://github.com/Maulik-Khandelwal");

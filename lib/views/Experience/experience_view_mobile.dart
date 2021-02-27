@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'experiences_content_mobile.dart';
 
@@ -9,6 +10,7 @@ class ExperienceViewMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     final ExperienceTitle = "--- Where I've Studied/Worked ---"
         .text
+        .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
         .white
         .xl
         .lineHeight(1)
@@ -55,6 +57,9 @@ class ExperienceViewMobile extends StatelessWidget {
             ),
             Align(
                 alignment: Alignment.center, child: ExperiencePictureWidget()),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.only(bottom: 40),
               child: ExperiencesMobile(),

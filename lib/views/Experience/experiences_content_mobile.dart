@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:steps/steps.dart';
 
 class ExperiencesMobile extends StatelessWidget {
@@ -15,11 +17,11 @@ class ExperiencesMobile extends StatelessWidget {
       child: Steps(
         direction: Axis.vertical,
         size: 20.0,
-        path: {'color': Colors.lightBlue.shade200, 'width': 2.75},
+        path: {'color': Color(0xFF34B0F3), 'width': 2.75},
         steps: [
           {
             'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
+            'background': Coolors.accentColor,
             'label': '🎓',
             'content': Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +29,7 @@ class ExperiencesMobile extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "School of Scholars, Amravati (INDIA)",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 22.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
@@ -38,7 +40,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "I studied in School of Scholars, Amravati from kindergarten to class 10.\nThis part of life has a huge role in making me what I am today.\nI shall always be indebted to what this school has given me.\nI passed my CBSE board exams with 96.2%.\n",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 13.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -46,7 +48,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "- 2017",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 12.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -57,7 +59,7 @@ class ExperiencesMobile extends StatelessWidget {
           },
           {
             'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
+            'background': Coolors.accentColor,
             'label': '🎓',
             'content': Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +67,7 @@ class ExperiencesMobile extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Dr. Ambedkar College, Deekshabhoomi, Nagpur (INDIA)",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 22.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
@@ -76,7 +78,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "I joined Dr. Ambedkar College, Deekshabhoomi, Nagpur for my 11th and 12th class.\nI passed by Higher Secondary Exams with 87.5%.\n",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 13.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -84,7 +86,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "2017 - 2019",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 12.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -95,7 +97,7 @@ class ExperiencesMobile extends StatelessWidget {
           },
           {
             'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
+            'background': Coolors.accentColor,
             'label': '🎓',
             'content': Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +105,7 @@ class ExperiencesMobile extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Vishwakarma Institute of Technology, Pune (INDIA)",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 22.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
@@ -114,7 +116,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "I am currently pursuing Bachelor's Degree in Computer Engineering \nVishwakarma Institute of Technology, Pune.\nCurrent CGPA - 9.12\n",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 13.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -122,7 +124,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "2019 - Present",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 12.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -133,7 +135,7 @@ class ExperiencesMobile extends StatelessWidget {
           },
           {
             'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
+            'background': Coolors.accentColor,
             'label': '🌟',
             'content': Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,7 +143,7 @@ class ExperiencesMobile extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Microsoft Learn Student Club VIT Pune",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 22.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
@@ -152,7 +154,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "AI/ML Developer at Microsoft Learn Student Club VIT Pune\n",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 13.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -160,7 +162,7 @@ class ExperiencesMobile extends StatelessWidget {
                 ),
                 Text(
                   "August - 2020 - Present",
-                  style: TextStyle(
+                  style: GoogleFonts.rajdhani(
                     fontSize: 12.0,
                     color: Color(0xffCCD6F6).withOpacity(0.5),
                     fontWeight: FontWeight.w500,
@@ -169,44 +171,44 @@ class ExperiencesMobile extends StatelessWidget {
               ],
             ),
           },
-          {
-            'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
-            'label': "📱",
-            'content': Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Lets Develop IT",
-                  style: TextStyle(
-                    fontSize: 22.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 6.0,
-                ),
-                Text(
-                  "I worked as a Flutter Developer and helped in designing the App for the organization.\n",
-                  style: TextStyle(
-                    fontSize: 13.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  "November - 2020 ",
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          },
+          // {
+          //   'color': Color(0xff64FFDA),
+          //   'background': Color(0xFF34B0F3),
+          //   'label': "📱",
+          //   'content': Column(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: <Widget>[
+          //       Text(
+          //         "Lets Develop IT",
+          //         style: GoogleFonts.rajdhani(
+          //           fontSize: 22.0,
+          //           color: Colors.white,
+          //           fontWeight: FontWeight.w700,
+          //         ),
+          //       ),
+          //       SizedBox(
+          //         height: 6.0,
+          //       ),
+          //       Text(
+          //         "I worked as a Flutter Developer and helped in designing the App for the organization.\n",
+          //         style: GoogleFonts.rajdhani(
+          //           fontSize: 13.0,
+          //           color: Color(0xffCCD6F6).withOpacity(0.5),
+          //           fontWeight: FontWeight.w500,
+          //         ),
+          //       ),
+          //       Text(
+          //         "November - 2020 ",
+          //         style: GoogleFonts.rajdhani(
+          //           fontSize: 12.0,
+          //           color: Color(0xffCCD6F6).withOpacity(0.5),
+          //           fontWeight: FontWeight.w500,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // },
         ],
       ),
     );

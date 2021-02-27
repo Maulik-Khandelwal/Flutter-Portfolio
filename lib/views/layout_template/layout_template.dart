@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/routing/route_names.dart';
 import 'package:portfolio/routing/router.dart';
@@ -55,7 +56,7 @@ class PictureWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: Image(
-        image: new AssetImage("assets/BGM.jpg"),
+        image: new AssetImage("assets/BGM1.jpg"),
         fit: BoxFit.cover,
         color: Colors.black87.withOpacity(0.7),
         colorBlendMode: BlendMode.darken,
@@ -85,7 +86,7 @@ class Footer extends StatelessWidget {
         //color: Colors.white,
         child: Text(
           "\n\n\nDesigned & Built by Maulik Khandelwal 💙 Flutter",
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             color: Colors.white.withOpacity(0.4),
             letterSpacing: 1.75,
             fontSize: 14.0,

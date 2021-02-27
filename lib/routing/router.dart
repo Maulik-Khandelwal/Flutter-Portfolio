@@ -4,6 +4,7 @@ import 'package:portfolio/views/Experience/experience_view.dart';
 import 'package:portfolio/views/Project/project_view.dart';
 import 'package:portfolio/views/about/about_view.dart';
 import 'package:portfolio/views/home/home_view.dart';
+import 'package:portfolio/views/skill/skill_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
@@ -12,6 +13,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(HomeView());
     case AboutRoute:
       return _getPageRoute(AboutView());
+    case SkillRoute:
+      return _getPageRoute(SkillView());
     case ExperienceRoute:
       return _getPageRoute(ExperienceView());
     case ProjectRoute:

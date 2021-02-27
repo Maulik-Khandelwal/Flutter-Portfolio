@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/views/about/about_view_intro_mobile.dart';
+import 'package:portfolio/views/skill/skill_mobile.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import 'MyPic_widget_mobile.dart';
-import 'about_view_intro_mobile.dart';
+import 'SkillPic_widget_mobile.dart';
 
-class AboutContentMobile extends StatelessWidget {
-  const AboutContentMobile({Key key}) : super(key: key);
-
+class SkillContentMobile extends StatelessWidget {
+  const SkillContentMobile({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- About Me ---"
+    final AboutTitle = "--- Skills which I have ---"
         .text
         .white
         .textStyle(GoogleFonts.rajdhani())
@@ -39,7 +39,7 @@ class AboutContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1780,
+        height: 1570,
         child: ListView(
 //          shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
@@ -52,13 +52,13 @@ class AboutContentMobile extends StatelessWidget {
                   child: AboutTitle,
                 ),
               ),
-              Align(alignment: Alignment.center, child: MyPicAboutMobile()),
+              // Align(alignment: Alignment.center, child: MyPicSkillMobile()),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: IntroductionAboutMobile(),
+                child: skillMobile(),
               ),
             ]),
       ),

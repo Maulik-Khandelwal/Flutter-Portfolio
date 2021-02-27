@@ -17,7 +17,7 @@ class NavigationDrawerFooter extends StatelessWidget {
         style: TextStyle(
           color: Colors.white.withOpacity(0.4),
           letterSpacing: 1.75,
-          fontSize: 14.0,
+          fontSize: 13.0,
         ),
       ),
     );

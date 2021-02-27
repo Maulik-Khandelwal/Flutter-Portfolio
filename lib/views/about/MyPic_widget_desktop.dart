@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:scratcher/scratcher.dart';
 
 class MyPicAboutDesktop extends StatelessWidget {
   const MyPicAboutDesktop({Key key}) : super(key: key);
@@ -41,16 +42,17 @@ class MyPicWidget extends StatelessWidget {
             top: size.height * 0.02,
             left: size.width * 0.06,
             child: Card(
-              // color: Color(0xff61F9D5),
-              color: Color(0xFF333333),
+              color: Color(0xFF34B0F3),
+              // color: Color(0xFF616161).withOpacity(0),
               child: Container(
                 margin: EdgeInsets.all(2.75),
                 height: size.height / 2,
                 width: size.width / 5,
                 decoration: BoxDecoration(
+                  // color: Color(0xFF616161).withOpacity(0)
                   gradient: LinearGradient(
-                    begin: Alignment.centerRight,
-                    end: Alignment.centerLeft,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                     colors: [
                       // Color(0xFF7A7A7A),
                       // Color(0xFF616161),
@@ -61,10 +63,10 @@ class MyPicWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                child: Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/mech.gif"),
-                ),
+                // child: Image(
+                //   fit: BoxFit.cover,
+                //   // image: AssetImage("assets/mech.gif"),
+                // ),
               ),
             ),
           ),
@@ -76,7 +78,7 @@ class MyPicWidget extends StatelessWidget {
               color: Colors.black54,
               child: Image(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/MyPic.jpeg"),
+                image: AssetImage("assets/MyPic.gif"),
               ),
             ),
           ),

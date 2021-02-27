@@ -72,10 +72,10 @@ class FeatureProjectInverted extends StatelessWidget {
                           colors: [
                             // Color(0xFF7A7A7A),
                             // Color(0xFF616161),
-                            Color(0xFF4A4A4A),
-                            Color(0xFF333333),
-                            Color(0xFF1E1E1E),
-                            Color(0xFF050505),
+                            Color(0xFF4A4A4A).withOpacity(0.95),
+                            Color(0xFF333333).withOpacity(0.95),
+                            Color(0xFF1E1E1E).withOpacity(0.95),
+                            Color(0xFF050505).withOpacity(0.95),
                           ],
                         ),
                       ),
@@ -87,8 +87,9 @@ class FeatureProjectInverted extends StatelessWidget {
                                 const EdgeInsets.symmetric(horizontal: 16.0),
                             child: CustomText(
                               text: projectDesc,
+                              fontWeight: FontWeight.w500,
                               textsize: 16.0,
-                              color: Colors.white.withOpacity(0.4),
+                              color: Colors.white,
                               letterSpacing: 0.75,
                             ),
                           ),
@@ -113,7 +114,7 @@ class FeatureProjectInverted extends StatelessWidget {
                         CustomText(
                           text: projectTitle,
                           textsize: 27,
-                          color: Colors.grey,
+                          color: Colors.white,
                           fontWeight: FontWeight.w700,
                           letterSpacing: 1.75,
                         ),
@@ -136,7 +137,8 @@ class FeatureProjectInverted extends StatelessWidget {
                         CustomText(
                           text: tech1 == null ? "" : tech1,
                           textsize: 14,
-                          color: Colors.grey,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
                           letterSpacing: 1.75,
                         ),
                         SizedBox(
@@ -145,7 +147,8 @@ class FeatureProjectInverted extends StatelessWidget {
                         CustomText(
                           text: tech2 == null ? "" : tech2,
                           textsize: 14,
-                          color: Colors.grey,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
                           letterSpacing: 1.75,
                         ),
                         SizedBox(
@@ -154,7 +157,8 @@ class FeatureProjectInverted extends StatelessWidget {
                         CustomText(
                           text: tech3 == null ? "" : tech3,
                           textsize: 14,
-                          color: Colors.grey,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
                           letterSpacing: 1.75,
                         ),
                       ],
@@ -175,7 +179,7 @@ class FeatureProjectInverted extends StatelessWidget {
                       children: [
                         IconButton(
                           icon: FaIcon(FontAwesomeIcons.github),
-                          color: Colors.white.withOpacity(0.3),
+                          color: Colors.white,
                           onPressed: ontab,
                         ).moveUpOnHover,
                       ],

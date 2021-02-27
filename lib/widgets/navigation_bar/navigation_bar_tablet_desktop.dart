@@ -27,6 +27,10 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                 SizedBox(
                   width: 60,
                 ),
+                NavBarItem('Skills', SkillRoute).moveUpOnHover,
+                SizedBox(
+                  width: 60,
+                ),
                 NavBarItem('Experience', ExperienceRoute).moveUpOnHover,
                 SizedBox(
                   width: 60,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/services/navigation_service.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
 
@@ -21,7 +22,7 @@ class NavBarItem extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(
+          style: GoogleFonts.rajdhani(
               fontSize: 18, color: Color(0xffCCD6F6).withOpacity(0.9)),
         ),
       ),

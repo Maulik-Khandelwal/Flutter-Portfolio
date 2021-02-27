@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/widgets/method/method.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'FeatureProjectMobile.dart';
 
 class ProjectViewMobile extends StatelessWidget {
@@ -11,6 +11,7 @@ class ProjectViewMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     final ProjectTitle = "--- Some Things I've Built ---"
         .text
+        .textStyle(GoogleFonts.rajdhani())
         .white
         .xl
         .lineHeight(1.3)
@@ -37,7 +38,7 @@ class ProjectViewMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 7850,
+        height: 1800,
         child: ListView(
 //          shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
@@ -91,208 +92,218 @@ class Projects extends StatelessWidget {
         ontab: () {
           method.launchURL("https://github.com/SatYu26/Flutter-ChatApp");
         },
-        image: "assets/chatApp.png",
-        projectname: 'Flutter ChatApp',
+        image: "assets/Snake.png",
+        projectname: "Snake Game",
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
       MobileProject(
         ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Face-Mask-Detection-Alert-System");
+          method.launchURL("https://github.com/SatYu26/Flutter-ChatApp");
         },
-        image: "assets/Alert.jpg",
-        projectname: 'Face Mask Detection Alert System',
+        image: "assets/portfolio.png",
+        projectname: 'Portfolio web app',
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method
-              .launchURL("https://github.com/SatYu26/Github-Contribution-Hack");
-        },
-        image: "assets/git.png",
-        projectname: 'GitHub Contribution Hack',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Mask-Detection-and-Recognition-using-Deep-Learning-Keras");
-        },
-        image: "assets/mask.jpeg",
-        projectname: 'Mask Detection and Recognition',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Portfolio-Code-Flutter");
-        },
-        image: "assets/Portfolio.png",
-        projectname: 'Portfolio Website',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Hand-Gesture-Classifier-With-Tensorflow.js");
-        },
-        image: "assets/tfjs.png",
-        projectname: 'Hand Gesture Classifier',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://marketplace.visualstudio.com/items?itemName=Satyu.wolverine");
-        },
-        image: "assets/wolverine.png",
-        projectname: 'Wolverine',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Fashion-Classifier-With-Tensorflow.js");
-        },
-        image: "assets/fashion.jpg",
-        projectname: 'Fashion Classifier',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/URL-Shortener");
-        },
-        image: "assets/url.jpg",
-        projectname: 'URL Shortener',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/SRM-WiFi-Auto-Login");
-        },
-        image: "assets/wifi.jpg",
-        projectname: 'SRM WiFi Auto Login',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Expression-Tracker");
-        },
-        image: "assets/expressions.png",
-        projectname: 'Expression Tracker',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Handwriting-Classifier-With-Tensorflow.js");
-        },
-        image: "assets/hw.png",
-        projectname: 'Handwriting Classifier',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Motion-Detector");
-        },
-        image: "assets/motion.png",
-        projectname: 'Motion Detector',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method
-              .launchURL("https://github.com/SatYu26/YouTube-Video-Downloader");
-        },
-        image: "assets/tube.jpeg",
-        projectname: 'YouTube Video Downloader',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Sudoku-Solver");
-        },
-        image: "assets/Sudoku.png",
-        projectname: 'Sudoku Solver',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Friday");
-        },
-        image: "assets/Friday.png",
-        projectname: 'Friday',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Face-Track");
-        },
-        image: "assets/face-track.jpg",
-        projectname: 'Face Track',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/SatYu26/Face-Recognition-Model-Version2");
-        },
-        image: "assets/faceRecog.jpg",
-        projectname: 'Face Recognition Model',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/Invisibility-Cloak");
-        },
-        image: "assets/InvisibilityCloak.jpg",
-        projectname: 'Invisibility Cloak',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
-      MobileProject(
-        ontab: () {
-          method.launchURL("https://github.com/SatYu26/PyGame-Snake");
-        },
-        image: "assets/snake.png",
-        projectname: 'PyGame Snake',
-      ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Face-Mask-Detection-Alert-System");
+      //   },
+      //   image: "assets/Alert.jpg",
+      //   projectname: 'Face Mask Detection Alert System',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method
+      //         .launchURL("https://github.com/SatYu26/Github-Contribution-Hack");
+      //   },
+      //   image: "assets/git.png",
+      //   projectname: 'GitHub Contribution Hack',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Mask-Detection-and-Recognition-using-Deep-Learning-Keras");
+      //   },
+      //   image: "assets/mask.jpeg",
+      //   projectname: 'Mask Detection and Recognition',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Portfolio-Code-Flutter");
+      //   },
+      //   image: "assets/Portfolio.png",
+      //   projectname: 'Portfolio Website',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Hand-Gesture-Classifier-With-Tensorflow.js");
+      //   },
+      //   image: "assets/tfjs.png",
+      //   projectname: 'Hand Gesture Classifier',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://marketplace.visualstudio.com/items?itemName=Satyu.wolverine");
+      //   },
+      //   image: "assets/wolverine.png",
+      //   projectname: 'Wolverine',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Fashion-Classifier-With-Tensorflow.js");
+      //   },
+      //   image: "assets/fashion.jpg",
+      //   projectname: 'Fashion Classifier',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/URL-Shortener");
+      //   },
+      //   image: "assets/url.jpg",
+      //   projectname: 'URL Shortener',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/SRM-WiFi-Auto-Login");
+      //   },
+      //   image: "assets/wifi.jpg",
+      //   projectname: 'SRM WiFi Auto Login',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Expression-Tracker");
+      //   },
+      //   image: "assets/expressions.png",
+      //   projectname: 'Expression Tracker',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Handwriting-Classifier-With-Tensorflow.js");
+      //   },
+      //   image: "assets/hw.png",
+      //   projectname: 'Handwriting Classifier',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Motion-Detector");
+      //   },
+      //   image: "assets/motion.png",
+      //   projectname: 'Motion Detector',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method
+      //         .launchURL("https://github.com/SatYu26/YouTube-Video-Downloader");
+      //   },
+      //   image: "assets/tube.jpeg",
+      //   projectname: 'YouTube Video Downloader',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Sudoku-Solver");
+      //   },
+      //   image: "assets/Sudoku.png",
+      //   projectname: 'Sudoku Solver',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Friday");
+      //   },
+      //   image: "assets/Friday.png",
+      //   projectname: 'Friday',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Face-Track");
+      //   },
+      //   image: "assets/face-track.jpg",
+      //   projectname: 'Face Track',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL(
+      //         "https://github.com/SatYu26/Face-Recognition-Model-Version2");
+      //   },
+      //   image: "assets/faceRecog.jpg",
+      //   projectname: 'Face Recognition Model',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/Invisibility-Cloak");
+      //   },
+      //   image: "assets/InvisibilityCloak.jpg",
+      //   projectname: 'Invisibility Cloak',
+      // ),
+      // SizedBox(
+      //   height: size.height * 0.06,
+      // ),
+      // MobileProject(
+      //   ontab: () {
+      //     method.launchURL("https://github.com/SatYu26/PyGame-Snake");
+      //   },
+      //   image: "assets/snake.png",
+      //   projectname: 'PyGame Snake',
+      // ),
     ]);
   }
 }

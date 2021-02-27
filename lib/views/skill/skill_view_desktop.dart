@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/views/skill/skill_desktop.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import 'MyPic_widget_desktop.dart';
-import 'about_view_intro_desktop.dart';
+import 'SkillPic_widget_desktop.dart';
 
-class AboutContentDesktop extends StatelessWidget {
-  const AboutContentDesktop({Key key}) : super(key: key);
+class SkillContentDesktop extends StatelessWidget {
+  const SkillContentDesktop({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- About Me ---"
+    final AboutTitle = "--- Skills which I have ---"
         .text
         .white
-        .xl
         .textStyle(GoogleFonts.rajdhani())
-        // .textStyle(GoogleFonts.poppins())
+        .xl
         .lineHeight(1)
         .size(context.isMobile ? 15 : 20)
         .bold
@@ -48,7 +47,7 @@ class AboutContentDesktop extends StatelessWidget {
             // Image(
             //   image: AssetImage('background.png'),
             // ),
-            Align(alignment: Alignment.centerRight, child: MyPicAboutDesktop()),
+            Align(alignment: Alignment.centerRight, child: MyPicSkillDesktop()),
             ListView(
               children: [
                 Padding(
@@ -62,7 +61,7 @@ class AboutContentDesktop extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      IntroductionAboutDesktop(),
+                      skillDesktop(),
                     ]),
               ],
             ),
@@ -71,4 +70,11 @@ class AboutContentDesktop extends StatelessWidget {
       ),
     );
   }
+}
+
+void fact() {
+  print(
+      "My name is maulik khandelwal and i am the best in the whole fucking world.");
+  print(
+      "My name is Maulik Khandelwal and I am the BEST in the whole fucking World!");
 }

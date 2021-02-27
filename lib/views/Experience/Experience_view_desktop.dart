@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'experiences_content_desktop.dart';
 
@@ -10,8 +11,10 @@ class ExperienceViewDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     final ExperienceTitle = "--- Where I've Studied/Worked ---"
         .text
+        // .textStyle(GoogleFonts.poppins())
         .white
         .xl
+        .textStyle(GoogleFonts.rajdhani())
         .lineHeight(1)
         .size(context.isMobile ? 15 : 20)
         .bold

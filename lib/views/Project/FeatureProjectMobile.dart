@@ -18,7 +18,7 @@ class MobileProject extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.29,
+                height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Image(
                   fit: BoxFit.fill,
@@ -31,7 +31,8 @@ class MobileProject extends StatelessWidget {
               child: CustomText(
                 text: projectname,
                 textsize: 16.0,
-                color: Colors.white.withOpacity(0.4),
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
                 letterSpacing: 0.75,
               ),
             ),
