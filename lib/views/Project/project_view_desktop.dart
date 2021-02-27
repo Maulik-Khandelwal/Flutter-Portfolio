@@ -111,7 +111,8 @@ class Projects extends StatelessWidget {
         FeatureProjectInverted(
           imagePath: "assets/portfolio.png",
           ontab: () {
-            method.launchURL("https://github.com/SatYu26/Flutter-ChatApp");
+            method.launchURL(
+                "https://github.com/Maulik-Khandelwal/Flutter-Portfolio");
           },
           projectDesc: "This doesn't require description 😉",
           projectTitle: "Portfolio web app",
@@ -123,10 +124,10 @@ class Projects extends StatelessWidget {
           imagePath: "assets/ascii.png",
           ontab: () {
             method.launchURL(
-                "https://github.com/SatYu26/Hand-Gesture-Classifier-With-Tensorflow.js");
+                "https://github.com/Maulik-Khandelwal/Image-to-ASCII-Art-Converter");
           },
-          projectDesc: "A snake game made using PyGame with Python.",
-          projectTitle: "Image to ASCII converter",
+          projectDesc: "A Python script which converts images into ASCII art.",
+          projectTitle: "Image to ASCII art converter",
           tech1: "Python",
           tech2: "PIL",
           tech3: "Image processing",
