@@ -39,7 +39,7 @@ class AboutContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1980,
+        height: 1950,
         child: ListView(
 //          shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
