@@ -23,7 +23,7 @@ class NameWidget extends StatelessWidget {
         .textStyle(GoogleFonts.pressStart2p())
         .lineHeight(1.4)
         .maxLines(2)
-        .size(context.isMobile ? 12 : 20)
+        .size(context.isMobile ? 8 : 20)
         // .bold
         .make()
         .shimmer();
