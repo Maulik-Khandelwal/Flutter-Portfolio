@@ -10,7 +10,7 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.55,
+      width: MediaQuery.of(context).size.width * 0.6,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.horizontal(
             left: Radius.circular(0), right: Radius.circular(16)),
@@ -36,7 +36,7 @@ class NavigationDrawer extends StatelessWidget {
           DrawerItem('Experience', Icons.work, ExperienceRoute),
           DrawerItem('Projects', Icons.palette, ProjectRoute),
           SizedBox(
-            height: 30,
+            height: MediaQuery.of(context).size.height * 0.18,
           ),
           NavigationDrawerFooter(),
         ],

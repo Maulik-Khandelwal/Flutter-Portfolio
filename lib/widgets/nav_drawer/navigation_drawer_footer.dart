@@ -12,12 +12,12 @@ class NavigationDrawerFooter extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.5,
       //color: Colors.white,
       child: Text(
-        "Designed & Built by\nMaulik Khandelwal 💙🤍 Flutter",
+        "Designed & Built by\nMaulik Khandelwal 🤍 Flutter",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.white.withOpacity(0.4),
           letterSpacing: 1.75,
-          fontSize: 14.0,
+          fontSize: 13.0,
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +23,7 @@ class NameWidget extends StatelessWidget {
         .textStyle(GoogleFonts.pressStart2p())
         .lineHeight(1.4)
         .maxLines(2)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 14 : 20)
         // .bold
         .make()
         .shimmer();
@@ -93,7 +94,7 @@ class SocialAccounts extends StatelessWidget {
     return [
       Icon(
         AntDesign.mail,
-        color: Coolors.accentColor,
+        color: Colors.white,
       )
           .mdClick(() {
             launch("mailto:kmaulik07@gmail.com");
@@ -103,7 +104,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.twitter,
-        color: Coolors.accentColor,
+        color: Colors.white,
       )
           .mdClick(() {
             launch("https://twitter.com/i_am_Maulik_K?s=09");
@@ -113,7 +114,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.instagram,
-        color: Coolors.accentColor,
+        color: Colors.white,
       )
           .mdClick(() {
             launch("https://www.instagram.com/maulik_khandelwal/");
@@ -123,7 +124,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.linkedin_square,
-        color: Coolors.accentColor,
+        color: Colors.white,
       )
           .mdClick(() {
             launch("https://www.linkedin.com/in/maulik-khandelwal-6142b51b0/");
@@ -133,7 +134,7 @@ class SocialAccounts extends StatelessWidget {
       20.widthBox,
       Icon(
         AntDesign.github,
-        color: Coolors.accentColor,
+        color: Colors.white,
       )
           .mdClick(() {
             launch("https://github.com/Maulik-Khandelwal");

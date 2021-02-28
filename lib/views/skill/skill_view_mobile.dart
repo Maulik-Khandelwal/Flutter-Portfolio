@@ -39,7 +39,7 @@ class SkillContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1600,
+        height: 1620,
         child: ListView(
 //          shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),

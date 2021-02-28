@@ -7,7 +7,7 @@ class NavigationDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.18,
+      height: MediaQuery.of(context).size.height * 0.16,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
         gradient: LinearGradient(
