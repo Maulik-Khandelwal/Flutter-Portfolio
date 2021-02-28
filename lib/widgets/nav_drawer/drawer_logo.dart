@@ -32,9 +32,10 @@ class NavbarLogoMob extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 80,
-        width: 200,
+        height: MediaQuery.of(context).size.height * 0.18,
+        // width: 200,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               '<',
@@ -75,41 +76,41 @@ class NavbarLogoDesk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 80,
-        width: 500,
-        child: Row(
-          children: [
-            Text(
-              '<',
-              style: GoogleFonts.stalemate(
-                color: Coolors.accentColor,
-                fontSize: 30,
-              ),
-            ),
-            Text(
-              'Maulik Khandelwal',
-              style: GoogleFonts.stalemate(
-                color: Color(0xFF34B0F3),
-                fontSize: 30,
-              ),
-            ),
-            Text(
-              '/',
-              style: GoogleFonts.stalemate(
-                color: Coolors.accentColor,
-                fontSize: 40,
-              ),
-            ),
-            Text(
-              '>',
-              style: GoogleFonts.stalemate(
-                color: Coolors.accentColor,
-                fontSize: 30,
-              ),
-            )
-          ],
-        )
-        //Image.asset('assets/images/logo.png'),
-        );
+      height: 80,
+      width: 500,
+      // child: Row(
+      //   children: [
+      //     Text(
+      //       '<',
+      //       style: GoogleFonts.stalemate(
+      //         color: Coolors.accentColor,
+      //         fontSize: 30,
+      //       ),
+      //     ),
+      //     Text(
+      //       'Maulik Khandelwal',
+      //       style: GoogleFonts.stalemate(
+      //         color: Color(0xFF34B0F3),
+      //         fontSize: 30,
+      //       ),
+      //     ),
+      //     Text(
+      //       '/',
+      //       style: GoogleFonts.stalemate(
+      //         color: Coolors.accentColor,
+      //         fontSize: 40,
+      //       ),
+      //     ),
+      //     Text(
+      //       '>',
+      //       style: GoogleFonts.stalemate(
+      //         color: Coolors.accentColor,
+      //         fontSize: 30,
+      //       ),
+      //     )
+      //   ],
+      // )
+      //Image.asset('assets/images/logo.png'),
+    );
   }
 }

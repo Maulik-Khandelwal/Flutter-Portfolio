@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -54,6 +55,31 @@ class Introduction extends StatelessWidget {
     );
   }
 
+  Widget point(BuildContext context, String text) {
+    return Row(
+      children: [
+        Icon(
+          FontAwesomeIcons.solidHandPointRight,
+          color: Color(0xff717C99),
+          size: 14.0,
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.01,
+        ),
+        Flexible(
+          child: text.text
+              .color(Color(0xff717C99))
+              .xl2
+              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
+              .make()
+              .w(context.isMobile
+                  ? context.screenWidth
+                  : context.percentWidth * 40),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -88,99 +114,42 @@ class Introduction extends StatelessWidget {
           SizedBox(
             height: 25,
           ),
-          "♦ I’ve always sought out opportunities and challenges that are meaningful to me."
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "I’ve always sought out opportunities and challenges that are meaningful to me."),
           SizedBox(
             height: 20,
           ),
-          "♦ I've never stopped engaging my passion to help others and solve problems."
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "I've never stopped engaging my passion to help others and solve problems."),
           SizedBox(
             height: 20,
           ),
-          "♦ Well organized person, Problem Solver, Enthusiastic Learner."
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "Well organized person, Problem Solver, Enthusiastic Learner."),
           SizedBox(
             height: 20,
           ),
-          "♦ I love Programming, Software development, Computer Science related topics and Machine Learning."
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "I love Programming, Software development, Computer Science related topics and Machine Learning."),
           SizedBox(
             height: 20,
           ),
-          "♦ Don't know why but I love C++, maybe because of my interest in competitive programming 😉"
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "Don't know why but I love C++, maybe because of my interest in competitive programming 😉"),
           SizedBox(
             height: 20,
           ),
-          "♦ I am a Petrolhead and I love Motorsport 🏎"
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context, "I am a Petrolhead and I love Motorsport 🏎"),
           SizedBox(
             height: 20,
           ),
-          "♦ I love to watch and play Cricket 🏏, Ya and I am a fan of Football also ⚽"
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "I love to watch and play Cricket 🏏, Ya and I am a fan of Football also ⚽"),
           SizedBox(
             height: 20,
           ),
-          "♦ Fan of Music, Outdoor Activities, TV Series and Video Games."
-              .text
-              .color(Color(0xff717C99))
-              .xl2
-              .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-              .make()
-              .w(context.isMobile
-                  ? context.screenWidth
-                  : context.percentWidth * 40),
+          point(context,
+              "Fan of Music, Outdoor Activities, TV Series and Video Games."),
           SizedBox(
             height: 40,
           ),

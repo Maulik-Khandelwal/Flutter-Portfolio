@@ -10,7 +10,7 @@ class IntroductionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.75;
-    double c_height = MediaQuery.of(context).size.height * 0.8;
+    double c_height = MediaQuery.of(context).size.height * 1;
     return Container(
       height: c_height,
       width: c_width,
@@ -40,7 +40,7 @@ class Introduction extends StatelessWidget {
                 "I am Software Developer who is passionate about creating technology to elevate people, and building community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel.\n"
             .text
             .white
-            .size(19)
+            .xl2
             .textStyle(GoogleFonts.rajdhani())
             .maxLines(15)
             .make()
@@ -60,7 +60,7 @@ class Introduction extends StatelessWidget {
               .color(
                 Color(0xffCCD6F6).withOpacity(0.6),
               )
-              .size(25)
+              .size(30)
               .textStyle(GoogleFonts.rajdhani())
               .maxLines(2)
               .bold

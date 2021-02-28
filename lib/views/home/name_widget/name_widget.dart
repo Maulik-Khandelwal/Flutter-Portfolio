@@ -21,6 +21,7 @@ class NameWidget extends StatelessWidget {
         // .textStyle(GoogleFonts.cormorantGaramond())
         .textStyle(GoogleFonts.pressStart2p())
         .lineHeight(1.4)
+        .maxLines(2)
         .size(context.isMobile ? 15 : 20)
         // .bold
         .make()

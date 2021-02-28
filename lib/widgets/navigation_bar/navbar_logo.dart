@@ -33,7 +33,7 @@ class NavbarLogoMob extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: 80,
-        width: 200,
+        width: 165,
         child: Align(
           alignment: Alignment.centerRight,
           child: Row(
@@ -79,7 +79,7 @@ class NavbarLogoDesk extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: 80,
-        width: 500,
+        width: 400,
         child: Row(
           children: [
             Text(

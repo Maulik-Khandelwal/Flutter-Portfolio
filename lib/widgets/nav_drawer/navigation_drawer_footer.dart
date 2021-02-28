@@ -9,15 +9,15 @@ class NavigationDrawerFooter extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: MediaQuery.of(context).size.height / 6,
-      width: MediaQuery.of(context).size.width - 100,
+      width: MediaQuery.of(context).size.width * 0.5,
       //color: Colors.white,
       child: Text(
-        "Designed & Built by\nMaulik Khandelwal 💙 Flutter",
+        "Designed & Built by\nMaulik Khandelwal 💙🤍 Flutter",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.white.withOpacity(0.4),
           letterSpacing: 1.75,
-          fontSize: 13.0,
+          fontSize: 14.0,
         ),
       ),
     );

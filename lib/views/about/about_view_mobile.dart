@@ -16,7 +16,7 @@ class AboutContentMobile extends StatelessWidget {
         .textStyle(GoogleFonts.rajdhani())
         .xl
         .lineHeight(1)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 20 : 20)
         .bold
         .make()
         .shimmer();
@@ -39,7 +39,7 @@ class AboutContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1780,
+        height: 2000,
         child: ListView(
 //          shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),

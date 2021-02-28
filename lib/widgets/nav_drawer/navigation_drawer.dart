@@ -10,7 +10,7 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 230,
+      width: MediaQuery.of(context).size.width * 0.55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.horizontal(
             left: Radius.circular(0), right: Radius.circular(16)),

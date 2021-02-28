@@ -15,7 +15,7 @@ class ProjectViewMobile extends StatelessWidget {
         .white
         .xl
         .lineHeight(1.3)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 20 : 20)
         .bold
         .make()
         .shimmer();
