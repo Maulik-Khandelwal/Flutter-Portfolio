@@ -10,10 +10,10 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: 230,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(16), top: Radius.circular(16)),
+        borderRadius: BorderRadius.horizontal(
+            left: Radius.circular(0), right: Radius.circular(16)),
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

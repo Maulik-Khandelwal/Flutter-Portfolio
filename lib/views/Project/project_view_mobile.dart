@@ -70,6 +70,28 @@ class Projects extends StatelessWidget {
       ),
       MobileProject(
         ontab: () {
+          method.launchURL(
+              "https://github.com/Maulik-Khandelwal/Flutter-Portfolio");
+        },
+        image: "assets/portfolio.png",
+        projectname: 'Portfolio web app',
+      ),
+      SizedBox(
+        height: size.height * 0.06,
+      ),
+      MobileProject(
+        ontab: () {
+          method.launchURL(
+              "https://github.com/Maulik-Khandelwal/Image-to-ASCII-Art-Converter");
+        },
+        image: "assets/ascii.png",
+        projectname: 'Image to ASCII art converter',
+      ),
+      SizedBox(
+        height: size.height * 0.06,
+      ),
+      MobileProject(
+        ontab: () {
           method
               .launchURL("https://github.com/Maulik-Khandelwal/Quiz-Maker-App");
         },
@@ -101,17 +123,7 @@ class Projects extends StatelessWidget {
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/Maulik-Khandelwal/Flutter-Portfolio");
-        },
-        image: "assets/portfolio.png",
-        projectname: 'Portfolio web app',
-      ),
-      SizedBox(
-        height: size.height * 0.06,
-      ),
+
       // MobileProject(
       //   ontab: () {
       //     method.launchURL(
