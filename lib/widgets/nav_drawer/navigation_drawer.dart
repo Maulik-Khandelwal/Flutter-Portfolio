@@ -39,7 +39,7 @@ class NavigationDrawer extends StatelessWidget {
           //   height: MediaQuery.of(context).size.height * 0.08,
           // ),
           Spacer(),
-          NavigationDrawerFooter(),
+          Center(child: NavigationDrawerFooter()),
         ],
       ),
     );
