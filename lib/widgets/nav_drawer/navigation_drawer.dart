@@ -20,8 +20,8 @@ class NavigationDrawer extends StatelessWidget {
           colors: [
             // Color(0xFF7A7A7A),
             // Color(0xFF616161),
-            Color(0xFF4A4A4A).withOpacity(0.95),
-            Color(0xFF333333).withOpacity(0.95),
+            // Color(0xFF4A4A4A).withOpacity(0.95),
+            // Color(0xFF333333).withOpacity(0.95),
             Color(0xFF1E1E1E).withOpacity(0.95),
             Color(0xFF050505).withOpacity(0.95),
           ],
@@ -35,9 +35,10 @@ class NavigationDrawer extends StatelessWidget {
           DrawerItem('Skills', Icons.bar_chart, SkillRoute),
           DrawerItem('Experience', Icons.work, ExperienceRoute),
           DrawerItem('Projects', Icons.palette, ProjectRoute),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.08,
-          ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height * 0.08,
+          // ),
+          Spacer(),
           NavigationDrawerFooter(),
         ],
       ),

@@ -11,14 +11,15 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, top: 60),
+      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.07),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Icon(
             icon,
             color: Colors.white,
           ),
-          SizedBox(width: 30),
+          SizedBox(width: 28),
           NavBarItemMobile(title, navigationPath),
         ],
       ),

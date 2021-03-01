@@ -32,7 +32,8 @@ class NameWidget extends StatelessWidget {
       width: 600,
       height: c_height,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+        padding: EdgeInsets.fromLTRB(
+            MediaQuery.of(context).size.width * 0.09, 0, 0, 0),
         child: ListView(
           physics: NeverScrollableScrollPhysics(),
           addAutomaticKeepAlives: true,

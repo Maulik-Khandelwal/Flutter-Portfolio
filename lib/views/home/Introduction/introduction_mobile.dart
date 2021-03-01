@@ -9,7 +9,7 @@ import 'package:portfolio/extensions/hover_extensions.dart';
 class IntroductionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double c_width = MediaQuery.of(context).size.width * 0.75;
+    double c_width = MediaQuery.of(context).size.width * 0.82;
     double c_height = MediaQuery.of(context).size.height * 1;
     return Container(
       height: c_height,
@@ -94,8 +94,7 @@ class Introduction extends StatelessWidget {
                 maxWidth: 150,
                 child: RaisedButton(
                   onPressed: () {
-                    launch(
-                        "https://drive.google.com/file/d/18ykZZxT2MbAa7xmk7uUzk84ug-KKvmnB/view?usp=sharing");
+                    launch("https://google.com/");
                   },
                   hoverColor: Vx.purple700,
                   shape: Vx.roundedSm,
