@@ -11,7 +11,8 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.07),
+      padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.height * 0.07,
+          MediaQuery.of(context).size.width * 0.04, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
