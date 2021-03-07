@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Maulik Khandelwal',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Coolors.accentColor,
         accentColor: Coolors.secondaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         // textTheme: GoogleFonts.poppinsTextTheme()
