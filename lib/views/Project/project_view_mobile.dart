@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/widgets/method/method.dart';
+import 'package:portfolio/widgets/project_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'FeatureProjectMobile.dart';
 
@@ -41,7 +44,7 @@ class ProjectViewMobile extends StatelessWidget {
         height: 1800,
         child: ListView(
 //          shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: BouncingScrollPhysics(),
             addAutomaticKeepAlives: true,
             children: <Widget>[
               Padding(
@@ -51,7 +54,7 @@ class ProjectViewMobile extends StatelessWidget {
                   child: ProjectTitle,
                 ),
               ),
-              Projects(),
+              Projects()
             ]),
       ),
     );
@@ -68,57 +71,68 @@ class Projects extends StatelessWidget {
       SizedBox(
         height: size.height * 0.04,
       ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/Maulik-Khandelwal/Flutter-Portfolio");
-        },
+      ProjectWidget(
+        link: "https://github.com/Maulik-Khandelwal/Flutter-Portfolio",
         image: "assets/portfolio.png",
         projectname: 'Portfolio web app',
+        projectDesc:
+            "fvgbh njhbygtfvuydcrf  ftbnaw3r a3wr aw3r 33 raw3r 3wr 3w3r a 3  ra3wr a3wrgr ",
+        tech1: "Flutter",
+        tech2: "Dart",
+        tech3: "Flutter Web",
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/Maulik-Khandelwal/Image-to-ASCII-Art-Converter");
-        },
+      ProjectWidget(
+        link:
+            "https://github.com/Maulik-Khandelwal/Image-to-ASCII-Art-Converter",
         image: "assets/ascii.png",
         projectname: 'Image to ASCII art converter',
+        projectDesc:
+            "fvgbh njhbygtfvuydcrf tvgbhnbyi aw r3wa ra4wtawt gtfudr tsb ydhdrt y etyftbn8",
+        tech1: "Python",
+        tech2: "PIL",
+        tech3: "Image processing",
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method
-              .launchURL("https://github.com/Maulik-Khandelwal/Quiz-Maker-App");
-        },
+      ProjectWidget(
+        link: "https://github.com/Maulik-Khandelwal/Quiz-Maker-App",
         image: "assets/Quiz Maker.png",
         projectname: 'Quiz Maker',
+        projectDesc:
+            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudr ftbnyta ra3wr a3wr a3w 3tw34tr 3r  aw",
+        tech1: "Flutter",
+        tech2: "Dart",
+        tech3: "Mobile App Development",
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter");
-        },
+      ProjectWidget(
+        link: "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter",
         image: "assets/Memory Game.png",
         projectname: 'Flutter Memory Game',
+        projectDesc:
+            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudr ftbnytfcdfta wa4w34  gyfd ftgyuh8hug8",
+        tech1: "Flutter",
+        tech2: "Dart",
+        tech3: "Mobile App Development",
       ),
       SizedBox(
         height: size.height * 0.06,
       ),
-      MobileProject(
-        ontab: () {
-          method.launchURL(
-              "https://github.com/Maulik-Khandelwal/PyGame-Snake-Game");
-        },
+      ProjectWidget(
+        link: "https://github.com/Maulik-Khandelwal/PyGame-Snake-Game",
         image: "assets/Snake.png",
         projectname: "Snake Game",
+        projectDesc:
+            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudrrs er gaergaerg g a4 ga4w g4g4w gtgy8",
+        tech1: "Python",
+        tech2: "PyGame",
+        tech3: "Game",
       ),
       SizedBox(
         height: size.height * 0.06,
