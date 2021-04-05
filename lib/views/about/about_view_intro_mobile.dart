@@ -12,10 +12,8 @@ class IntroductionAboutMobile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 0, 5, 0),
       width: c_width,
-      height: c_height,
+      height: 1800,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Flexible(child: Introduction()),
         ],

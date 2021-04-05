@@ -15,7 +15,7 @@ class NameWidget extends StatelessWidget {
     double c_width = MediaQuery.of(context).size.width * 0.5;
     double c_height = MediaQuery.of(context).size.height * 0.51;
 
-    final SNameWidget = "Maulik\nKhandelwal."
+    final s = "Maulik\nKhandelwal."
         .text
         .white
         .xl4
@@ -28,9 +28,14 @@ class NameWidget extends StatelessWidget {
         .make()
         .shimmer();
 
+    final SNameWidget = FittedBox(
+      fit: BoxFit.fitWidth,
+      child: s,
+    );
+
     return Container(
       width: 600,
-      height: c_height,
+      height: 420,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             context.isMobile ? MediaQuery.of(context).size.width * 0.09 : 60,

@@ -10,7 +10,7 @@ class IntroductionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.82;
-    double c_height = MediaQuery.of(context).size.height * 1;
+    double c_height = 370000 * 8 / (MediaQuery.of(context).size.width + 3500);
     return Container(
       height: c_height,
       width: c_width,

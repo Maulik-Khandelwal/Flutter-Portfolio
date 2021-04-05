@@ -10,10 +10,12 @@ class skillMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.6;
     double c_height = MediaQuery.of(context).size.height * 2.55;
+    print(c_height);
+
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 0, 5, 0),
       width: c_width,
-      height: c_height,
+      height: 1800,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
