@@ -37,6 +37,16 @@ class ProjectWidget extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     int randomNumber = random.nextInt(5000);
     return Column(children: [
+      Padding(
+        padding: const EdgeInsets.only(bottom: 8.0),
+        child: CustomText(
+          text: projectname,
+          textsize: 16.0,
+          fontWeight: FontWeight.w400,
+          color: Colors.white,
+          letterSpacing: 0.75,
+        ),
+      ),
       FlipCard(
         flipOnTouch: true,
         direction: randomNumber % 2 == 0
@@ -86,7 +96,7 @@ class ProjectWidget extends StatelessWidget {
                       letterSpacing: 0.75,
                     ),
                   ),
-                  SizedBox(height: 40),
+                  // SizedBox(height: 40),
                   // InkWell(
                   //     child: new Text(link,
                   //         style: Theme.of(context)
@@ -95,64 +105,62 @@ class ProjectWidget extends StatelessWidget {
                   //             .apply(color: Colors.blue)),
                   //     onTap: () => method.launchURL(link)),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        icon: FaIcon(FontAwesomeIcons.github),
-                        color: Colors.white,
-                        onPressed: () => method.launchURL(link),
-                      ).moveUpOnHover,
-                    ],
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CustomText(
-                        text: tech1 == null ? "" : tech1,
-                        textsize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                        letterSpacing: 1.75,
-                      ),
-                      SizedBox(
-                        width: 16.0,
-                      ),
-                      CustomText(
-                        text: tech2 == null ? "" : tech2,
-                        textsize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                        letterSpacing: 1.75,
-                      ),
-                      SizedBox(
-                        width: 16.0,
-                      ),
-                      CustomText(
-                        text: tech3 == null ? "" : tech3,
-                        textsize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                        letterSpacing: 1.75,
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     IconButton(
+                  //       icon: FaIcon(FontAwesomeIcons.github),
+                  //       color: Colors.white,
+                  //       onPressed: () => method.launchURL(link),
+                  //     ).moveUpOnHover,
+                  //   ],
+                  // ),
                 ],
               ),
             ),
           ),
         ),
       ),
-      Padding(
-        padding: const EdgeInsets.only(top: 8.0),
-        child: CustomText(
-          text: projectname,
-          textsize: 16.0,
-          fontWeight: FontWeight.w400,
-          color: Colors.white,
-          letterSpacing: 0.75,
-        ),
+      SizedBox(height: 8),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomText(
+            text: tech1 == null ? "" : tech1,
+            textsize: 12,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+            letterSpacing: 1.75,
+          ),
+          SizedBox(
+            width: 16.0,
+          ),
+          CustomText(
+            text: tech2 == null ? "" : tech2,
+            textsize: 12,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+            letterSpacing: 1.75,
+          ),
+          SizedBox(
+            width: 16.0,
+          ),
+          CustomText(
+            text: tech3 == null ? "" : tech3,
+            textsize: 12,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+            letterSpacing: 1.75,
+          ),
+          SizedBox(
+            width: 16.0,
+          ),
+          IconButton(
+            icon: FaIcon(FontAwesomeIcons.github),
+            color: Colors.white,
+            onPressed: () => method.launchURL(link),
+          ).moveUpOnHover,
+        ],
       ),
     ]);
   }
