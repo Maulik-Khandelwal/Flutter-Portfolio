@@ -41,8 +41,8 @@ class ProjectWidget extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 8.0),
         child: CustomText(
           text: projectname,
-          textsize: 16.0,
-          fontWeight: FontWeight.w400,
+          textsize: 17.0,
+          fontWeight: FontWeight.w500,
           color: Colors.white,
           letterSpacing: 0.75,
         ),
@@ -79,9 +79,8 @@ class ProjectWidget extends StatelessWidget {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
+                        Color(0xFF1E1E1E).withOpacity(0.95),
                         Color(0xFF1E1E1E).withOpacity(0.7),
-                        Color(0xFF050505).withOpacity(0.7),
-
                         // Color(0xFF050505).withOpacity(0.95),
                       ])),
               child: Wrap(
@@ -121,14 +120,14 @@ class ProjectWidget extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(height: 8),
+      // SizedBox(height: 8),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomText(
             text: tech1 == null ? "" : tech1,
             textsize: 12,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
             color: Colors.white,
             letterSpacing: 1.75,
           ),
@@ -138,7 +137,7 @@ class ProjectWidget extends StatelessWidget {
           CustomText(
             text: tech2 == null ? "" : tech2,
             textsize: 12,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
             color: Colors.white,
             letterSpacing: 1.75,
           ),
@@ -148,7 +147,7 @@ class ProjectWidget extends StatelessWidget {
           CustomText(
             text: tech3 == null ? "" : tech3,
             textsize: 12,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
             color: Colors.white,
             letterSpacing: 1.75,
           ),

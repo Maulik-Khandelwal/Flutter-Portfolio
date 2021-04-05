@@ -75,8 +75,7 @@ class Projects extends StatelessWidget {
         link: "https://github.com/Maulik-Khandelwal/Flutter-Portfolio",
         image: "assets/portfolio.png",
         projectname: 'Portfolio web app',
-        projectDesc:
-            "fvgbh njhbygtfvuydcrf  ftbnaw3r a3wr aw3r 33 raw3r 3wr 3w3r a 3  ra3wr a3wrgr ",
+        projectDesc: "This doesn't require description 😉",
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Flutter Web",
@@ -89,8 +88,7 @@ class Projects extends StatelessWidget {
             "https://github.com/Maulik-Khandelwal/Image-to-ASCII-Art-Converter",
         image: "assets/ascii.png",
         projectname: 'Image to ASCII art converter',
-        projectDesc:
-            "fvgbh njhbygtfvuydcrf tvgbhnbyi aw r3wa ra4wtawt gtfudr tsb ydhdrt y etyftbn8",
+        projectDesc: "A Python script which converts images into ASCII art.",
         tech1: "Python",
         tech2: "PIL",
         tech3: "Image processing",
@@ -103,7 +101,7 @@ class Projects extends StatelessWidget {
         image: "assets/Quiz Maker.png",
         projectname: 'Quiz Maker',
         projectDesc:
-            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudr ftbnyta ra3wr a3wr a3w 3tw34tr 3r  aw",
+            "Practice Quiz Maker App is a simple and user-friendly mobile application made using flutter API for creating and sharing quizzes, all with beautiful UI.",
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Mobile App Development",
@@ -115,8 +113,7 @@ class Projects extends StatelessWidget {
         link: "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter",
         image: "assets/Memory Game.png",
         projectname: 'Flutter Memory Game',
-        projectDesc:
-            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudr ftbnytfcdfta wa4w34  gyfd ftgyuh8hug8",
+        projectDesc: "A Memory Game made using Flutter.",
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Mobile App Development",
@@ -128,8 +125,7 @@ class Projects extends StatelessWidget {
         link: "https://github.com/Maulik-Khandelwal/PyGame-Snake-Game",
         image: "assets/Snake.png",
         projectname: "Snake Game",
-        projectDesc:
-            "fvgbh njhbygtfvuydcrf tvgbhnbyi gtfudrrs er gaergaerg g a4 ga4w g4g4w gtgy8",
+        projectDesc: "A snake game made using PyGame with Python.",
         tech1: "Python",
         tech2: "PyGame",
         tech3: "Game",

@@ -116,7 +116,7 @@ class Projects extends StatelessWidget {
             method.launchURL(
                 "https://github.com/Maulik-Khandelwal/Memory-Game-Flutter");
           },
-          projectDesc: "A Memory Game made using Flutter",
+          projectDesc: "A Memory Game made using Flutter.",
           projectTitle: "Flutter Memory Game",
           tech1: "Flutter",
           tech2: "Dart",
