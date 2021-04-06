@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
+import 'package:portfolio/extensions/arrowOnTop.dart';
 
 class NameWidget extends StatelessWidget {
   const NameWidget({Key key}) : super(key: key);
@@ -13,7 +15,7 @@ class NameWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.5;
-    double c_height = MediaQuery.of(context).size.height * 0.51;
+    double height = MediaQuery.of(context).size.height;
 
     final s = "Maulik\nKhandelwal."
         .text
@@ -28,14 +30,16 @@ class NameWidget extends StatelessWidget {
         .make()
         .shimmer();
 
-    final SNameWidget = FittedBox(
-      fit: BoxFit.fitWidth,
-      child: s,
-    );
+    final SNameWidget = context.isMobile
+        ? FittedBox(
+            fit: BoxFit.fitWidth,
+            child: s,
+          )
+        : s;
 
     return Container(
       width: 600,
-      height: 420,
+      height: 440,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             context.isMobile ? MediaQuery.of(context).size.width * 0.09 : 60,
@@ -49,30 +53,52 @@ class NameWidget extends StatelessWidget {
             if (context.isMobile) 50.heightBox else 10.heightBox,
             Align(
                 alignment: Alignment.topLeft,
-                child:
-                    CustomAppBar().shimmer(primaryColor: Coolors.accentColor)),
-            SizedBox(
-              height: 20,
-            ),
+                child: Image.asset(
+                  "assets/home.gif",
+                  height: height * 0.11,
+                ).shimmer(primaryColor: Coolors.accentColor)),
+            // SizedBox(
+            //   height: 10,
+            // ),
             SNameWidget,
             SizedBox(
               height: 30,
             ),
+            // Row(
+            //   children: [
+            //     LimitedBox(
+            //       maxWidth: 80,
+            //       child: VxBox()
+            //           .color(Coolors.accentColor)
+            //           .size(60, 10)
+            //           .make()
+            //           .px4()
+            //           .shimmer(primaryColor: Coolors.accentColor),
+            //     ),
+            //   ],
+            // ),
             Row(
               children: [
-                LimitedBox(
-                  maxWidth: 80,
-                  child: VxBox()
-                      .color(Coolors.accentColor)
-                      .size(60, 10)
-                      .make()
-                      .px4()
-                      .shimmer(primaryColor: Coolors.accentColor),
+                Icon(
+                  Icons.play_arrow_rounded,
+                  color: Coolors.accentColor,
                 ),
+                TyperAnimatedTextKit(
+                    isRepeatingAnimation: true,
+                    speed: Duration(milliseconds: 50),
+                    textStyle: GoogleFonts.rajdhani(
+                        color: Colors.white,
+                        fontSize: height * 0.03,
+                        fontWeight: FontWeight.w300),
+                    text: [
+                      " Flutter Developer",
+                      " Technical Writer",
+                      " UI/UX Enthusiast"
+                    ]),
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             SocialAccounts(),
           ],

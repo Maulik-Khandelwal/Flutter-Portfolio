@@ -14,6 +14,7 @@ import 'package:portfolio/Colors/colors.dart';
 //     );
 //   }
 // }
+
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBarLogo extends StatelessWidget {
@@ -33,7 +34,7 @@ class NavbarLogoMob extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: 80,
-        width: 160,
+        width: 187,
         child: Align(
           alignment: Alignment.centerRight,
           child: Row(
@@ -46,11 +47,11 @@ class NavbarLogoMob extends StatelessWidget {
                 ),
               ),
               Text(
-                'Maulik Khandelwal',
-                style: GoogleFonts.stalemate(
-                  color: Color(0xFF34B0F3),
-                  fontSize: 25,
-                ),
+                "Maulik Khandelwal",
+                style: TextStyle(
+                    color: Color(0xFF34B0F3),
+                    fontFamily: "Agustina",
+                    fontSize: 16),
               ),
               Text(
                 '/',
@@ -89,12 +90,19 @@ class NavbarLogoDesk extends StatelessWidget {
                 fontSize: 30,
               ),
             ),
+            // Text(
+            //   'Maulik Khandelwal',
+            //   style: GoogleFonts.stalemate(
+            //     color: Color(0xFF34B0F3),
+            //     fontSize: 30,
+            //   ),
+            // ),
             Text(
-              'Maulik Khandelwal',
-              style: GoogleFonts.stalemate(
-                color: Color(0xFF34B0F3),
-                fontSize: 30,
-              ),
+              "Maulik Khandelwal",
+              style: TextStyle(
+                  color: Color(0xFF34B0F3),
+                  fontFamily: "Agustina",
+                  fontSize: 20),
             ),
             Text(
               '/',

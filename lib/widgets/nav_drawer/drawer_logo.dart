@@ -45,11 +45,11 @@ class NavbarLogoMob extends StatelessWidget {
               ),
             ),
             Text(
-              'Maulik Khandelwal',
-              style: GoogleFonts.stalemate(
-                color: Color(0xFF34B0F3),
-                fontSize: 25,
-              ),
+              "Maulik Khandelwal",
+              style: TextStyle(
+                  color: Color(0xFF34B0F3),
+                  fontFamily: "Agustina",
+                  fontSize: 16),
             ),
             Text(
               '/',
