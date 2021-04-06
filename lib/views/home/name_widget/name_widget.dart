@@ -7,7 +7,6 @@ import 'package:portfolio/Colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
-import 'package:portfolio/extensions/arrowOnTop.dart';
 
 class NameWidget extends StatelessWidget {
   const NameWidget({Key key}) : super(key: key);
