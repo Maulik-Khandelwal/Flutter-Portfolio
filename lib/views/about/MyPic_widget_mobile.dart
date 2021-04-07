@@ -6,28 +6,33 @@ class MyPicAboutMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-      child: SizedBox(height: 360, width: 300, child: MyPicWidget()),
-    );
-  }
-}
-
-class MyPicWidget extends StatelessWidget {
-  const MyPicWidget({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Image(
-        image: new AssetImage("assets/hack.jpg"),
-        height: 150,
-        width: 100,
-        fit: BoxFit.cover,
+    final rad = MediaQuery.of(context).size.width * 0.25;
+    return CircleAvatar(
+      radius: rad,
+      backgroundColor: Color(0xFF34B0F3),
+      child: CircleAvatar(
+        radius: rad - 4,
+        backgroundImage: AssetImage('assets/hack.jpg'),
       ),
     );
   }
 }
+
+// class MyPicWidget extends StatelessWidget {
+//   const MyPicWidget({
+//     Key key,
+//   }) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return ClipRRect(
+//       borderRadius: BorderRadius.circular(20.0),
+//       child: Image(
+//         image: new AssetImage("assets/hack.jpg"),
+//         height: 150,
+//         width: 100,
+//         fit: BoxFit.cover,
+//       ),
+//     );
+//   }
+// }

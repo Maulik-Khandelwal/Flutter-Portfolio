@@ -44,7 +44,11 @@ class NavigationDrawerFooter extends StatelessWidget {
                       .color(Colors.white.withOpacity(0.4))
                       .make(),
                 ),
-                Icon(FontAwesome5Solid.heart),
+                Icon(
+                  CupertinoIcons.heart_solid,
+                  color: Colors.blue,
+                  size: 15,
+                ),
                 FittedBox(
                   fit: BoxFit.fitWidth,
                   child: " Flutter"

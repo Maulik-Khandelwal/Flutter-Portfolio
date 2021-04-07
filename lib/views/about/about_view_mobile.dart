@@ -52,6 +52,9 @@ class AboutContentMobile extends StatelessWidget {
                   child: AboutTitle,
                 ),
               ),
+              SizedBox(
+                height: 15,
+              ),
               Align(alignment: Alignment.center, child: MyPicAboutMobile()),
               SizedBox(
                 height: 20,
