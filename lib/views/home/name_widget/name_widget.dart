@@ -13,7 +13,7 @@ class NameWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double c_width = MediaQuery.of(context).size.width * 0.5;
+    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
     final s = "Maulik\nKhandelwal."
@@ -49,24 +49,38 @@ class NameWidget extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(),
           addAutomaticKeepAlives: true,
           children: <Widget>[
-            Row(
-              children: [
-                Text(
-                  "WELCOME TO MY",
-                  style: GoogleFonts.rajdhani(
-                    color: Coolors.accentColor,
-                    fontSize: 25,
+            FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Row(
+                children: [
+                  Text(
+                    "WELCOME TO MY",
+                    style: GoogleFonts.rajdhani(
+                      color: Coolors.accentColor,
+                      fontSize: 25,
+                    ),
                   ),
-                ),
-                Align(
-                    alignment: Alignment.topLeft,
-                    child: Image.asset(
-                      "assets/home1.gif",
-                      height: height * 0.07,
-                    ).shimmer(
-                        primaryColor: Coolors.accentColor,
-                        showAnimation: false)),
-              ],
+                  // Align(
+                  //     alignment: Alignment.topLeft,
+                  //     child: Image.asset(
+                  //       "assets/home1.gif",
+                  //       height: height * 0.07,
+                  //     ).shimmer(
+                  //         primaryColor: Coolors.accentColor,
+                  //         showAnimation: false)),
+                  Text(
+                    " PORTFOLIO",
+                    style: GoogleFonts.rajdhani(
+                      color: Color(0xFF34B0F3),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
+                  ),
+                  SizedBox(
+                    width: width * 0.25,
+                  )
+                ],
+              ),
             ),
             SizedBox(
               height: 10,

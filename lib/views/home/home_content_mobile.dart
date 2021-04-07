@@ -13,6 +13,9 @@ class HomeContentMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          SizedBox(
+            height: 20,
+          ),
           Padding(
             padding: EdgeInsets.only(
                 right: MediaQuery.of(context).size.width * 0.125),
