@@ -38,7 +38,7 @@ class NameWidget extends StatelessWidget {
 
     return Container(
       width: 600,
-      height: 440,
+      height: 390,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             context.isMobile ? MediaQuery.of(context).size.width * 0.09 : 60,
@@ -49,16 +49,28 @@ class NameWidget extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(),
           addAutomaticKeepAlives: true,
           children: <Widget>[
-            if (context.isMobile) 50.heightBox else 10.heightBox,
-            Align(
-                alignment: Alignment.topLeft,
-                child: Image.asset(
-                  "assets/home.gif",
-                  height: height * 0.11,
-                ).shimmer(primaryColor: Coolors.accentColor)),
-            // SizedBox(
-            //   height: 10,
-            // ),
+            Row(
+              children: [
+                Text(
+                  "WELCOME TO MY",
+                  style: GoogleFonts.rajdhani(
+                    color: Coolors.accentColor,
+                    fontSize: 25,
+                  ),
+                ),
+                Align(
+                    alignment: Alignment.topLeft,
+                    child: Image.asset(
+                      "assets/home1.gif",
+                      height: height * 0.07,
+                    ).shimmer(
+                        primaryColor: Coolors.accentColor,
+                        showAnimation: false)),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
             SNameWidget,
             SizedBox(
               height: 30,
