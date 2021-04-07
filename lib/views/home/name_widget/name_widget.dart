@@ -116,8 +116,8 @@ class NameWidget extends StatelessWidget {
                         fontSize: height * 0.03,
                         fontWeight: FontWeight.w300),
                     text: [
+                      " Student",
                       " Flutter Developer",
-                      " Competitive Programmer",
                       " Machine Learning Enthusiast"
                     ]),
               ],

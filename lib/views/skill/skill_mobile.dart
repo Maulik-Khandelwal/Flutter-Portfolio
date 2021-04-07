@@ -102,7 +102,7 @@ class Skill extends StatelessWidget {
                   endIndent: MediaQuery.of(context).size.width * 0.07,
                 ),
                 buildSkill(name: 'C++', value: 8),
-                buildSkill(name: 'Python', value: 8),
+                buildSkill(name: 'Python', value: 7),
                 buildSkill(name: 'Dart', value: 5),
                 buildSkill(name: 'Java', value: 4),
                 buildSkill(name: 'R', value: 5),
