@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -51,41 +52,44 @@ class NameWidget extends StatelessWidget {
           children: <Widget>[
             FittedBox(
               fit: BoxFit.fitWidth,
-              child: Row(
-                children: [
-                  Text(
-                    "WELCOME TO MY",
-                    style: GoogleFonts.rajdhani(
-                      color: Coolors.accentColor,
-                      fontSize: 25,
+              child: FadeAnimation(
+                1,
+                Row(
+                  children: [
+                    Text(
+                      "WELCOME TO MY",
+                      style: GoogleFonts.rajdhani(
+                        color: Coolors.accentColor,
+                        fontSize: 25,
+                      ),
                     ),
-                  ),
-                  // Align(
-                  //     alignment: Alignment.topLeft,
-                  //     child: Image.asset(
-                  //       "assets/home1.gif",
-                  //       height: height * 0.07,
-                  //     ).shimmer(
-                  //         primaryColor: Coolors.accentColor,
-                  //         showAnimation: false)),
-                  Text(
-                    " PORTFOLIO",
-                    style: GoogleFonts.rajdhani(
-                      color: Color(0xFF34B0F3),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                    // Align(
+                    //     alignment: Alignment.topLeft,
+                    //     child: Image.asset(
+                    //       "assets/home1.gif",
+                    //       height: height * 0.07,
+                    //     ).shimmer(
+                    //         primaryColor: Coolors.accentColor,
+                    //         showAnimation: false)),
+                    Text(
+                      " PORTFOLIO",
+                      style: GoogleFonts.rajdhani(
+                        color: Color(0xFF34B0F3),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width * 0.25,
-                  )
-                ],
+                    SizedBox(
+                      width: width * 0.25,
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
               height: 10,
             ),
-            SNameWidget,
+            FadeAnimation(2, SNameWidget),
             SizedBox(
               height: 30,
             ),
@@ -102,25 +106,30 @@ class NameWidget extends StatelessWidget {
             //     ),
             //   ],
             // ),
-            Row(
-              children: [
-                Icon(
-                  Icons.play_arrow_rounded,
-                  color: Coolors.accentColor,
-                ),
-                TyperAnimatedTextKit(
-                    isRepeatingAnimation: true,
-                    speed: Duration(milliseconds: 50),
-                    textStyle: GoogleFonts.rajdhani(
-                        color: Colors.white,
-                        fontSize: height * 0.03,
-                        fontWeight: FontWeight.w300),
-                    text: [
-                      " Student",
-                      " Flutter Developer",
-                      " Machine Learning Enthusiast"
-                    ]),
-              ],
+            FadeAnimation(
+              3,
+              Row(
+                children: [
+                  Icon(
+                    Icons.play_arrow_rounded,
+                    color: Coolors.accentColor,
+                  ),
+                  TyperAnimatedTextKit(
+                      isRepeatingAnimation: true,
+                      speed: Duration(milliseconds: 50),
+                      textStyle: GoogleFonts.rajdhani(
+                          color: Colors.white,
+                          fontSize: height * 0.03,
+                          fontWeight: FontWeight.w300),
+                      text: [
+                        " Student",
+                        " Learner",
+                        " Flutter Developer",
+                        " Competitive Programmer",
+                        " Machine Learning Enthusiast"
+                      ]),
+                ],
+              ),
             ),
             SizedBox(
               height: 30,
@@ -152,55 +161,67 @@ class SocialAccounts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return [
-      Icon(
-        AntDesign.mail,
-        color: Colors.white,
-      )
-          .mdClick(() {
-            launch("mailto:kmaulik07@gmail.com");
-          })
-          .make()
-          .moveUpOnHover,
+      FadeAnimation(
+        4,
+        Icon(
+          AntDesign.mail,
+          color: Colors.white,
+        )
+            .mdClick(() {
+              launch("mailto:kmaulik07@gmail.com");
+            })
+            .make()
+            .moveUpOnHover,
+      ),
       20.widthBox,
-      Icon(
-        AntDesign.twitter,
-        color: Colors.white,
-      )
-          .mdClick(() {
-            launch("https://twitter.com/i_am_Maulik_K?s=09");
-          })
-          .make()
-          .moveUpOnHover,
+      FadeAnimation(
+          4.25,
+          Icon(
+            AntDesign.twitter,
+            color: Colors.white,
+          )
+              .mdClick(() {
+                launch("https://twitter.com/i_am_Maulik_K?s=09");
+              })
+              .make()
+              .moveUpOnHover),
       20.widthBox,
-      Icon(
-        AntDesign.instagram,
-        color: Colors.white,
-      )
-          .mdClick(() {
-            launch("https://www.instagram.com/maulik_khandelwal/");
-          })
-          .make()
-          .moveUpOnHover,
+      FadeAnimation(
+          4.5,
+          Icon(
+            AntDesign.instagram,
+            color: Colors.white,
+          )
+              .mdClick(() {
+                launch("https://www.instagram.com/maulik_khandelwal/");
+              })
+              .make()
+              .moveUpOnHover),
       20.widthBox,
-      Icon(
-        AntDesign.linkedin_square,
-        color: Colors.white,
-      )
-          .mdClick(() {
-            launch("https://www.linkedin.com/in/maulik-khandelwal-6142b51b0/");
-          })
-          .make()
-          .moveUpOnHover,
+      FadeAnimation(
+          4.75,
+          Icon(
+            AntDesign.linkedin_square,
+            color: Colors.white,
+          )
+              .mdClick(() {
+                launch(
+                    "https://www.linkedin.com/in/maulik-khandelwal-6142b51b0/");
+              })
+              .make()
+              .moveUpOnHover),
       20.widthBox,
-      Icon(
-        AntDesign.github,
-        color: Colors.white,
-      )
-          .mdClick(() {
-            launch("https://github.com/Maulik-Khandelwal");
-          })
-          .make()
-          .moveUpOnHover,
+      FadeAnimation(
+          5,
+          Icon(
+            AntDesign.github,
+            color: Colors.white,
+          )
+              .mdClick(() {
+                launch("https://github.com/Maulik-Khandelwal");
+              })
+              .make()
+              .moveUpOnHover),
     ].hStack();
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -30,28 +31,34 @@ class Skill extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  Widget buildTextHeader(String text) {
+  Widget buildTextHeader(String text, double fadeTime) {
     double textScaleFactor = 2;
-    return Text(
-      text,
-      textScaleFactor: textScaleFactor,
-      style: GoogleFonts.rajdhani(
-          color: Colors.white, fontWeight: FontWeight.w500),
+    return FadeAnimation(
+      fadeTime,
+      Text(
+        text,
+        textScaleFactor: textScaleFactor,
+        style: GoogleFonts.rajdhani(
+            color: Colors.white, fontWeight: FontWeight.w500),
+      ),
     );
   }
 
-  Widget buildSkill({String name, int value}) {
+  Widget buildSkill({String name, int value, double fadeTime}) {
     double textScaleFactor = 1.5;
-    return ListTile(
-      title: Text(
-        name,
-        textScaleFactor: textScaleFactor,
-        style: GoogleFonts.rajdhani(
-            color: Color(0xff717C99),
-            fontSize: 15,
-            fontWeight: FontWeight.w500),
+    return FadeAnimation(
+      fadeTime,
+      ListTile(
+        title: Text(
+          name,
+          textScaleFactor: textScaleFactor,
+          style: GoogleFonts.rajdhani(
+              color: Color(0xff717C99),
+              fontSize: 15,
+              fontWeight: FontWeight.w500),
+        ),
+        trailing: buildLevel(value),
       ),
-      trailing: buildLevel(value),
     );
   }
 
@@ -88,7 +95,7 @@ class Skill extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.2,
             child: Column(
               children: <Widget>[
-                buildTextHeader('Programming languages'),
+                buildTextHeader('Programming languages', 4),
                 Divider(
                   color: Color(0xff717C99),
                   height: 20,
@@ -96,15 +103,15 @@ class Skill extends StatelessWidget {
                   indent: MediaQuery.of(context).size.width * 0.07,
                   endIndent: MediaQuery.of(context).size.width * 0.07,
                 ),
-                buildSkill(name: 'C++', value: 8),
-                buildSkill(name: 'Python', value: 7),
-                buildSkill(name: 'Dart', value: 5),
-                buildSkill(name: 'Java', value: 4),
-                buildSkill(name: 'R', value: 5),
+                buildSkill(name: 'C++', value: 8, fadeTime: 4.2),
+                buildSkill(name: 'Python', value: 7, fadeTime: 4.4),
+                buildSkill(name: 'Dart', value: 5, fadeTime: 4.6),
+                buildSkill(name: 'Java', value: 4, fadeTime: 4.8),
+                buildSkill(name: 'R', value: 5, fadeTime: 5),
                 SizedBox(
                   height: 20,
                 ),
-                buildTextHeader('Soft skills'),
+                buildTextHeader('Soft skills', 6),
                 Divider(
                   color: Color(0xff717C99),
                   height: 20,
@@ -112,12 +119,12 @@ class Skill extends StatelessWidget {
                   indent: MediaQuery.of(context).size.width * 0.07,
                   endIndent: MediaQuery.of(context).size.width * 0.07,
                 ),
-                buildSkill(name: 'Teamwork', value: 9),
-                buildSkill(name: 'Communication', value: 7),
+                buildSkill(name: 'Teamwork', value: 9, fadeTime: 6.2),
+                buildSkill(name: 'Communication', value: 7, fadeTime: 6.2),
                 SizedBox(
                   height: 20,
                 ),
-                buildTextHeader('Tools & Technologies'),
+                buildTextHeader('Tools & Technologies', 7.2),
                 Divider(
                   color: Color(0xff717C99),
                   height: 20,
@@ -125,15 +132,15 @@ class Skill extends StatelessWidget {
                   indent: MediaQuery.of(context).size.width * 0.07,
                   endIndent: MediaQuery.of(context).size.width * 0.07,
                 ),
-                buildSkill(name: 'Git', value: 8),
-                buildSkill(name: 'Linux', value: 7),
-                buildSkill(name: 'Cmake', value: 8),
-                buildSkill(name: 'Flutter', value: 9),
-                buildSkill(name: 'Firebase', value: 8),
+                buildSkill(name: 'Git', value: 8, fadeTime: 7.4),
+                buildSkill(name: 'Linux', value: 7, fadeTime: 7.6),
+                buildSkill(name: 'Cmake', value: 8, fadeTime: 7.8),
+                buildSkill(name: 'Flutter', value: 9, fadeTime: 8.0),
+                buildSkill(name: 'Firebase', value: 8, fadeTime: 8.2),
                 SizedBox(
                   height: 20,
                 ),
-                buildTextHeader('Other Skills'),
+                buildTextHeader('Other Skills', 9.2),
                 Divider(
                   color: Color(0xff717C99),
                   height: 20,
@@ -141,11 +148,11 @@ class Skill extends StatelessWidget {
                   indent: MediaQuery.of(context).size.width * 0.07,
                   endIndent: MediaQuery.of(context).size.width * 0.07,
                 ),
-                buildSkill(name: 'Data Science', value: 8),
-                buildSkill(name: 'AI/ML', value: 7),
-                buildSkill(name: 'Algorithm', value: 6),
-                buildSkill(name: 'Data structure', value: 8),
-                buildSkill(name: 'MYSQL', value: 5),
+                buildSkill(name: 'Data Science', value: 8, fadeTime: 9.4),
+                buildSkill(name: 'AI/ML', value: 7, fadeTime: 9.6),
+                buildSkill(name: 'Algorithm', value: 6, fadeTime: 9.8),
+                buildSkill(name: 'Data structure', value: 8, fadeTime: 10),
+                buildSkill(name: 'MYSQL', value: 5, fadeTime: 10.2),
               ],
             ),
           )
@@ -183,115 +190,145 @@ class SkillsLogoDesk extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.laptopCode,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                1,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.laptopCode,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.python,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                1.3,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.python,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.android,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                1.6,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.android,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    Icons.analytics_outlined,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                1.9,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      Icons.analytics_outlined,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    MaterialCommunityIcons.language_cpp,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                2.2,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      MaterialCommunityIcons.language_cpp,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.git,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                2.5,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.git,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    Icons.sports_cricket,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                2.8,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      Icons.sports_cricket,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.java,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                3.1,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.java,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.database,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                3.4,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.database,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
               SizedBox(
                 width: 5,
               ),
-              Container(
-                  width: 80,
-                  height: 80,
-                  child: Icon(
-                    FontAwesomeIcons.linux,
-                    size: 60,
-                    color: Color(0xff717C99),
-                  )),
+              FadeAnimation(
+                3.7,
+                Container(
+                    width: 80,
+                    height: 80,
+                    child: Icon(
+                      FontAwesomeIcons.linux,
+                      size: 60,
+                      color: Color(0xff717C99),
+                    )),
+              ),
             ],
           ),
           SizedBox(

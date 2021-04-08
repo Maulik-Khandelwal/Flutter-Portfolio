@@ -79,6 +79,7 @@ class Projects extends StatelessWidget {
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Flutter Web",
+        fadeTime: 1,
       ),
       SizedBox(
         height: size.height * 0.06,
@@ -92,6 +93,7 @@ class Projects extends StatelessWidget {
         tech1: "Python",
         tech2: "PIL",
         tech3: "Image processing",
+        fadeTime: 2,
       ),
       SizedBox(
         height: size.height * 0.06,
@@ -105,6 +107,7 @@ class Projects extends StatelessWidget {
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Mobile App Development",
+        fadeTime: 3,
       ),
       SizedBox(
         height: size.height * 0.06,
@@ -117,6 +120,7 @@ class Projects extends StatelessWidget {
         tech1: "Flutter",
         tech2: "Dart",
         tech3: "Mobile App Development",
+        fadeTime: 4,
       ),
       SizedBox(
         height: size.height * 0.06,
@@ -129,6 +133,7 @@ class Projects extends StatelessWidget {
         tech1: "Python",
         tech2: "PyGame",
         tech3: "Game",
+        fadeTime: 5,
       ),
       SizedBox(
         height: size.height * 0.06,

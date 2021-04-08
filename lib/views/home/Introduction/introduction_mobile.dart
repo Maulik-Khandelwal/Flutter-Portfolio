@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -51,65 +52,71 @@ class Introduction extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         addAutomaticKeepAlives: true,
         children: <Widget>[
-          "- Introduction".text.gray500.widest.sm.make(),
+          FadeAnimation(1, "- Introduction".text.gray500.widest.sm.make()),
           SizedBox(
             height: 20,
           ),
-          "I want to make things that make a difference."
-              .text
-              .color(
-                Color(0xffCCD6F6).withOpacity(0.6),
-              )
-              .size(30)
-              .textStyle(GoogleFonts.rajdhani())
-              .maxLines(2)
-              .bold
-              .make(),
+          FadeAnimation(
+              2,
+              "I want to make things that make a difference."
+                  .text
+                  .color(
+                    Color(0xffCCD6F6).withOpacity(0.6),
+                  )
+                  .size(30)
+                  .textStyle(GoogleFonts.rajdhani())
+                  .maxLines(2)
+                  .bold
+                  .make()),
           SizedBox(
             height: 15,
           ),
-          introWidget,
+          FadeAnimation(3, introWidget),
           SizedBox(
             height: 20,
           ),
-          Row(
-            children: [
-              LimitedBox(
-                maxWidth: 60,
-                child: VxBox()
-                    .color(Coolors.accentColor)
-                    .size(60, 10)
-                    .make()
-                    .px4()
-                    .shimmer(primaryColor: Coolors.accentColor),
-              ),
-            ],
-          ),
+          FadeAnimation(
+              3.5,
+              Row(
+                children: [
+                  LimitedBox(
+                    maxWidth: 60,
+                    child: VxBox()
+                        .color(Coolors.accentColor)
+                        .size(60, 10)
+                        .make()
+                        .px4()
+                        .shimmer(primaryColor: Coolors.accentColor),
+                  ),
+                ],
+              )),
           SizedBox(
             height: 20,
           ),
-          Row(
-            children: [
-              LimitedBox(
-                maxWidth: 150,
-                child: RaisedButton(
-                  onPressed: () {
-                    launch("https://google.com/");
-                  },
-                  hoverColor: Vx.purple700,
-                  shape: Vx.roundedSm,
-                  color: Coolors.accentColor,
-                  textColor: Coolors.primaryColor,
-                  child: "Resume"
-                      .text
-                      .bold
-                      .size(16)
-                      .textStyle(GoogleFonts.rajdhani())
-                      .make(),
-                ).h(50),
-              ),
-            ],
-          ).moveUpOnHover, // crossAlignment: CrossAxisAlignment.center,
+          FadeAnimation(
+              4,
+              Row(
+                children: [
+                  LimitedBox(
+                    maxWidth: 150,
+                    child: RaisedButton(
+                      onPressed: () {
+                        launch("https://google.com/");
+                      },
+                      hoverColor: Vx.purple700,
+                      shape: Vx.roundedSm,
+                      color: Coolors.accentColor,
+                      textColor: Coolors.primaryColor,
+                      child: "Resume"
+                          .text
+                          .bold
+                          .size(16)
+                          .textStyle(GoogleFonts.rajdhani())
+                          .make(),
+                    ).h(50),
+                  ),
+                ],
+              ).moveUpOnHover), // crossAlignment: CrossAxisAlignment.center,
         ]);
   }
 }

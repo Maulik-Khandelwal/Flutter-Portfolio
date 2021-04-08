@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'MyPic_widget_mobile.dart';
@@ -55,7 +56,10 @@ class AboutContentMobile extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Align(alignment: Alignment.center, child: MyPicAboutMobile()),
+              FadeAnimation(
+                  1,
+                  Align(
+                      alignment: Alignment.center, child: MyPicAboutMobile())),
               SizedBox(
                 height: 20,
               ),

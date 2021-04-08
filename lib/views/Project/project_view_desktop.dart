@@ -84,6 +84,7 @@ class Projects extends StatelessWidget {
           tech1: "Flutter",
           tech2: "Dart",
           tech3: "Flutter Web",
+          fadeTime: 1,
         ),
         FeatureProjectInverted(
           imagePath: "assets/ascii.png",
@@ -96,6 +97,7 @@ class Projects extends StatelessWidget {
           tech1: "Python",
           tech2: "PIL",
           tech3: "Image processing",
+          fadeTime: 2,
         ),
         FeatureProject(
           imagePath: "assets/Quiz Maker.png",
@@ -109,6 +111,7 @@ class Projects extends StatelessWidget {
           tech1: "Flutter",
           tech2: "Dart",
           tech3: "Mobile App Development",
+          fadeTime: 3,
         ),
         FeatureProjectInverted(
           imagePath: "assets/Memory Game.png",
@@ -121,6 +124,7 @@ class Projects extends StatelessWidget {
           tech1: "Flutter",
           tech2: "Dart",
           tech3: "Mobile App Development",
+          fadeTime: 4,
         ),
         FeatureProject(
           imagePath: "assets/Snake.png",
@@ -133,6 +137,7 @@ class Projects extends StatelessWidget {
           tech1: "Python",
           tech2: "PyGame",
           tech3: "Game",
+          fadeTime: 5,
         ),
         // FeatureProject(
         //   imagePath: "assets/Alert.jpg",

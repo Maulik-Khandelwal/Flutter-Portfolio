@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   velocity_x: ^1.4.1
   flutter_icons: ^1.1.0
+  simple_animations: ^1.3.3
   url_launcher: ^5.4.7
   responsive_builder: ^0.1.2
   get_it: ^4.0.2
