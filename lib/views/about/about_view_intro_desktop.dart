@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Animations/FadeAnimation.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
+import 'package:portfolio/extensions/hover_extensions.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class IntroductionAboutDesktop extends StatelessWidget {
@@ -9,8 +12,9 @@ class IntroductionAboutDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.6;
     double c_height = MediaQuery.of(context).size.height * 0.7;
+
     return Container(
-      padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
+      padding: const EdgeInsets.fromLTRB(60, 0, 60, 0),
       width: c_width,
       height: c_height,
       child: Row(
@@ -29,60 +33,47 @@ class Introduction extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  Widget technology(BuildContext context, String text) {
-    return Row(
-      children: [
-        Icon(
-          Icons.skip_next,
-          color: Color(0xFF34B0F3).withOpacity(0.6),
-          size: 15.0,
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.01,
-        ),
-        Text(
-          text,
-          style: GoogleFonts.rajdhani(
-            fontWeight: FontWeight.w500,
-            fontSize: 15,
-            color: Color(0xff717C99),
-            letterSpacing: 1.75,
+  Widget technology(BuildContext context, String text, double fadeTime) {
+    return FadeAnimation(
+      fadeTime,
+      Row(
+        children: [
+          Icon(
+            Icons.play_arrow,
+            color: Color(0xFF34B0F3),
+            size: 15.0,
           ),
-        )
-      ],
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.001,
+          ),
+          Text(
+            text,
+            style: GoogleFonts.rajdhani(
+              fontWeight: FontWeight.w500,
+              fontSize: 15,
+              color: Colors.white,
+              letterSpacing: 1.75,
+            ),
+          )
+        ],
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    final AboutintroWidget =
-        "Well, I have done a lot of introspection before I start to pen down my thoughts on this part. Writing about oneself isn’t an easy task (I believe). You need to be honest in every word of your prose. Its not a problem to be vulnerable, your strengths, weaknesses, your stories define who you are, what you are and why you are! So, firstly I say that I am still into the process of knowing me. The best is yet to come. Who am I? Answering a question like this has often been difficult even for those with high intelligence quotient. I may not know who I fully am, but I know who I am not. I am not a vindictive person, I am not irresponsible, I am not slack with my studies, I am not dishonest and I will never deliberately set out to hurt anyone.  I know I am not perfect, I have never tried to be, but one thing is true – I AM WHO I AM.\n\n"
-            .text
-            .color(Color(0xff717C99))
-            .xl2
-            .textStyle(GoogleFonts.rajdhani())
-            .make()
-            .w(context.isMobile
-                ? context.screenWidth
-                : context.percentWidth * 40);
-    // "⚡ I’m currently sleeping 😴 or working on my laptop 👨‍💻\n"
-    // "⚡ I’m good in Android Development and currently learning Web Development With Flutter 💪.\n"
-    // "⚡ I’m looking to collaborate on Machine Learning & Python 🐍 projects.\n"
-    // "⚡ I Love Machine Learning and Open CV 🌐\n"
-    // "⚡ Ask me about why do I think aliens 👽 exist.\n"
-    // "⚡ Fun fact: My smartness 💡 lies in my laziness 😴\n"
-
+    double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: ListView(children: <Widget>[
         FadeAnimation(
             1,
-            "Well, I have done a lot of introspection before I start to pen down my thoughts on this part. Writing about oneself isn’t an easy task (I believe). You need to be honest in every word of your prose. Its not a problem to be vulnerable, your strengths, weaknesses, your stories define who you are, what you are and why you are! So, firstly I say that I am still into the process of knowing me. The best is yet to come. Who am I? Answering a question like this has often been difficult even for those with high intelligence quotient. I may not know who I fully am, but I know who I am not. I am not a vindictive person, I am not irresponsible, I am not slack with my studies, I am not dishonest and I will never deliberately set out to hurt anyone.  I know I am not perfect, I have never tried to be, but one thing is true – I AM WHO I AM."
+            "Who am I?"
                 .text
-                .color(Color(0xff717C99))
+                .color(Color(0xFF34B0F3))
                 .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
+                .textStyle(GoogleFonts.montserrat(fontWeight: FontWeight.w300))
                 .make()
                 .w(context.isMobile
                     ? context.screenWidth
@@ -92,10 +83,10 @@ class Introduction extends StatelessWidget {
         ),
         FadeAnimation(
             2,
-            "♦ I’ve always sought out opportunities and challenges that are meaningful to me."
+            "I'm MAULIK KHANDELWAL, a Flutter developer, Competitive programmer and a tech enthusiast."
                 .text
-                .color(Color(0xff717C99))
-                .xl2
+                .color(Colors.white)
+                .xl3
                 .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
                 .make()
                 .w(context.isMobile
@@ -105,74 +96,8 @@ class Introduction extends StatelessWidget {
           height: 25,
         ),
         FadeAnimation(
-            2.5,
-            "♦ I've never stopped engaging my passion to help others and solve problems.\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
             3,
-            "♦ Well organized person, Problem Solver, Enthusiastic Learner.\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
-            3.5,
-            "♦ I love Programming, Software development, Computer Science related topics and Machine Learning.\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
-            4,
-            "♦ Don't know why but I love C++, maybe because of my interest in competitive programming 😉\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
-            4.5,
-            "♦ I am a Petrolhead and I love Motorsport 🏎\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
-            5,
-            "♦ I love to watch and play Cricket 🏏, Ya and I am a fan of Football also ⚽\n"
-                .text
-                .color(Color(0xff717C99))
-                .xl2
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()
-                .w(context.isMobile
-                    ? context.screenWidth
-                    : context.percentWidth * 40)),
-        FadeAnimation(
-            5.5,
-            "♦ Fan of Music, Outdoor Activities, TV Series and Video Games.\n"
+            "I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune. I am a Software Developer who is passionate about creating technology to elevate people and build community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel. I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune."
                 .text
                 .color(Color(0xff717C99))
                 .xl2
@@ -182,65 +107,148 @@ class Introduction extends StatelessWidget {
                     ? context.screenWidth
                     : context.percentWidth * 40)),
         SizedBox(
+          height: 15,
+        ),
+        FadeAnimation(
+          3.5,
+          Divider(
+            color: Coolors.accentColor.withOpacity(0.7),
+            height: 20,
+            thickness: 2,
+            // indent: MediaQuery.of(context).size.width * 0.07,
+            // endIndent: MediaQuery.of(context).size.width * 0.07,
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        FadeAnimation(
+            4,
+            "Technologies I have worked with:\n\n"
+                .text
+                .color(Color(0xFF34B0F3))
+                .size(15)
+                .bold
+                .letterSpacing(0.75)
+                .textStyle(GoogleFonts.montserrat(fontWeight: FontWeight.w200))
+                .make()),
+        width > 1080
+            ? Row(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  technology(context, "Flutter", 4.3),
+                  SizedBox(
+                    width: width * 0.009,
+                  ),
+                  technology(context, "Dart", 4.6),
+                  SizedBox(
+                    width: width * 0.009,
+                  ),
+                  technology(context, "Firebase", 4.9),
+                  SizedBox(
+                    width: width * 0.009,
+                  ),
+                  technology(context, "C++", 5.2),
+                  SizedBox(
+                    width: width * 0.009,
+                  ),
+                  technology(context, "Python", 5.5),
+                  SizedBox(
+                    width: width * 0.009,
+                  ),
+                  technology(context, "Machine Learning", 5.8),
+                ],
+              )
+            : Column(
+                children: [
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      technology(context, "Flutter", 4.3),
+                      SizedBox(
+                        width: width * 0.009,
+                      ),
+                      technology(context, "Dart", 4.6),
+                      SizedBox(
+                        width: width * 0.009,
+                      ),
+                      technology(context, "Firebase", 4.9),
+                      SizedBox(
+                        width: width * 0.009,
+                      ),
+                      technology(context, "C++", 5.2),
+                    ],
+                  ),
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      technology(context, "Python", 5.5),
+                      SizedBox(
+                        width: width * 0.009,
+                      ),
+                      technology(context, "Machine Learning", 5.8),
+                    ],
+                  )
+                ],
+              ),
+        SizedBox(
+          height: 10,
+        ),
+        FadeAnimation(
+          6.3,
+          Divider(
+            color: Coolors.accentColor.withOpacity(0.7),
+            height: 20,
+            thickness: 2,
+            // indent: MediaQuery.of(context).size.width * 0.07,
+            // endIndent: MediaQuery.of(context).size.width * 0.07,
+          ),
+        ),
+        SizedBox(
           height: 20,
         ),
         FadeAnimation(
-            6,
-            "Here are a few technologies I've been working with recently:\n\n"
-                .text
-                .color(Color(0xff828DAA))
-                .size(20)
-                .bold
-                .letterSpacing(0.75)
-                .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
-                .make()),
-        // CustomText(
-        //   text:
-        //       "Here are a few technologies I've been working with recently:\n\n",
-        //   textsize: 16.0,
-        //   color: Color(0xff828DAA),
-        //   fontWeight: FontWeight.w500,
-        //   letterSpacing: 0.75,
-        // ), // crossAlignment: CrossAxisAlignment.center,
-        FadeAnimation(
-          3,
-          Container(
-            height: size.height * 0.15,
-            width: size.width,
-            //   color: Colors.redAccent,
-            child: Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: size.width * 0.20,
-                  height: size.height * 0.25,
-                  child: Column(
-                    children: [
-                      technology(context, "Dart"),
-                      technology(context, "Flutter"),
-                      technology(context, "Firebase"),
-                      technology(context, "C++"),
-                      technology(context, "Tensorflow"),
-                    ],
-                  ),
-                ),
-                Container(
-                  width: size.width * 0.20,
-                  height: size.height * 0.25,
-                  child: Column(
-                    children: [
-                      technology(context, "Python"),
-                      technology(context, "Pygame"),
-                      technology(context, "Open CV"),
-                      technology(context, "Machine Learning"),
-                      technology(context, "Data Science"),
-                    ],
-                  ),
-                )
-              ],
-            ),
+          6.8,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              LimitedBox(
+                maxWidth: 150,
+                child: RaisedButton(
+                  onPressed: () {
+                    launch("https://google.com/");
+                  },
+                  hoverColor: Color(0xFF34B0F3),
+                  shape: Vx.roundedSm,
+                  color: Coolors.accentColor.withOpacity(1),
+                  textColor: Coolors.primaryColor,
+                  child: "Resume"
+                      .text
+                      .bold
+                      .size(16)
+                      .textStyle(GoogleFonts.rajdhani())
+                      .make(),
+                ).h(40),
+              ).moveUpOnHover,
+              // SizedBox(
+              //   width: 20,
+              // ),
+              // Expanded(
+              //   child: FadeAnimation(
+              //     7.8,
+              //     Divider(
+              //       color: Coolors.accentColor.withOpacity(0.7),
+              //       height: 20,
+              //       thickness: 2,
+              //       indent: 20,
+              //       endIndent: MediaQuery.of(context).size.width * 0.14,
+              //     ),
+              //   ),
+              // ),
+            ],
           ),
-        ),
+        )
       ]),
     );
   }

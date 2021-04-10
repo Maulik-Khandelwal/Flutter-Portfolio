@@ -12,13 +12,13 @@ class ProjectViewDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ProjectTitle = "--- Some Things I've Built ---"
+    final ProjectTitle = "Some Things I've Built"
         .text
         .white
-        .textStyle(GoogleFonts.rajdhani())
         .xl
-        .lineHeight(1.3)
-        .size(context.isMobile ? 15 : 20)
+        .textStyle(GoogleFonts.josefinSans())
+        .lineHeight(1)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
@@ -47,7 +47,7 @@ class ProjectViewDesktop extends StatelessWidget {
           child: ListView(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 40),
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
                 child: Align(
                   alignment: Alignment.center,
                   child: ProjectTitle,

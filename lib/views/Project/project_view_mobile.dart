@@ -12,13 +12,13 @@ class ProjectViewMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ProjectTitle = "--- Some Things I've Built ---"
+    final ProjectTitle = "Some Things I've Built"
         .text
-        .textStyle(GoogleFonts.rajdhani())
         .white
         .xl
-        .lineHeight(1.3)
-        .size(context.isMobile ? 20 : 20)
+        .textStyle(GoogleFonts.josefinSans())
+        .lineHeight(1)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
@@ -48,7 +48,7 @@ class ProjectViewMobile extends StatelessWidget {
             addAutomaticKeepAlives: true,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: ProjectTitle,

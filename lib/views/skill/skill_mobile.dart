@@ -11,8 +11,6 @@ class skillMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.6;
     double c_height = MediaQuery.of(context).size.height * 2.55;
-    print(c_height);
-
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 0, 5, 0),
       width: c_width,
@@ -90,10 +88,27 @@ class Skill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AboutTitle = "Skills which I have"
+        .text
+        .white
+        .xl
+        .textStyle(GoogleFonts.josefinSans())
+        .lineHeight(1)
+        .size(context.isMobile ? 25 : 30)
+        .bold
+        .make()
+        .shimmer();
     return ListView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         addAutomaticKeepAlives: true,
         children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: AboutTitle,
+            ),
+          ),
           SkillsLogoMob(),
           Container(
             width: MediaQuery.of(context).size.width * 0.2,

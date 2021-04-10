@@ -11,16 +11,8 @@ class AboutContentMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- About Me ---"
-        .text
-        .white
-        .textStyle(GoogleFonts.rajdhani())
-        .xl
-        .lineHeight(1)
-        .size(context.isMobile ? 20 : 20)
-        .bold
-        .make()
-        .shimmer();
+    double width = MediaQuery.of(context).size.width;
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.0),
       child: Container(
@@ -40,34 +32,19 @@ class AboutContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1950,
-        child: ListView(
-//          shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            addAutomaticKeepAlives: true,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: AboutTitle,
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              FadeAnimation(
-                  1,
-                  Align(
-                      alignment: Alignment.center, child: MyPicAboutMobile())),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: IntroductionAboutMobile(),
-              ),
-            ]),
+        height: MediaQuery.of(context).size.height,
+        child: Stack(fit: StackFit.expand, children: [
+          SizedBox(
+            height: 15,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 0, 20, 40),
+            child: IntroductionAboutMobile(),
+          ),
+        ]),
       ),
     );
   }

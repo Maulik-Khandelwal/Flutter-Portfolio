@@ -10,13 +10,13 @@ class SkillContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- Skills which I have ---"
+    final AboutTitle = "Skills which I have"
         .text
         .white
-        .textStyle(GoogleFonts.rajdhani())
         .xl
+        .textStyle(GoogleFonts.josefinSans())
         .lineHeight(1)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
@@ -44,27 +44,24 @@ class SkillContentDesktop extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            // Image(
-            //   image: AssetImage('background.png'),
-            // ),
             Align(alignment: Alignment.centerRight, child: MyPicSkillDesktop()),
-            ListView(
+            Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 40),
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
                   child: Align(
                     alignment: Alignment.center,
                     child: AboutTitle,
                   ),
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      skillDesktop(),
-                    ]),
               ],
             ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  skillDesktop(),
+                ]),
           ],
         ),
       ),

@@ -41,37 +41,39 @@ class MyPicWidget extends StatelessWidget {
           Positioned(
             top: size.height * 0.02,
             left: size.width * 0.06,
-            child: Card(
-              color: Color(0xFF34B0F3),
+            child: ClipRect(
               // color: Color(0xFF616161).withOpacity(0),
               child: Container(
-                margin: EdgeInsets.all(2.75),
-                height: size.height / 2,
-                width: size.width / 5,
-                decoration: BoxDecoration(
-                  // color: Color(0xFF616161).withOpacity(0)
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomRight,
-                    end: Alignment.topLeft,
-                    colors: [
-                      // Color(0xFF7A7A7A),
-                      // Color(0xFF616161),
-                      Color(0xFF4A4A4A),
-                      Color(0xFF333333),
-                      Color(0xFF1E1E1E),
-                      Color(0xFF050505),
-                    ],
+                color: Color(0xFF34B0F3),
+                child: Container(
+                  margin: EdgeInsets.all(2.75),
+                  height: size.height / 2,
+                  width: size.width / 5,
+                  decoration: BoxDecoration(
+                    // color: Color(0xFF616161).withOpacity(0)
+                    gradient: LinearGradient(
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                      colors: [
+                        // Color(0xFF7A7A7A),
+                        // Color(0xFF616161),
+                        Color(0xFF4A4A4A),
+                        Color(0xFF333333),
+                        Color(0xFF1E1E1E),
+                        Color(0xFF050505),
+                      ],
+                    ),
                   ),
+                  // child: Image(
+                  //   fit: BoxFit.cover,
+                  //   // image: AssetImage("assets/mech.gif"),
+                  // ),
                 ),
-                // child: Image(
-                //   fit: BoxFit.cover,
-                //   // image: AssetImage("assets/mech.gif"),
-                // ),
               ),
             ),
           ),
           ClipRRect(
-            borderRadius: BorderRadius.circular(20.0),
+            // borderRadius: BorderRadius.circular(20.0),
             child: Container(
               height: size.height / 2,
               width: size.width / 5,

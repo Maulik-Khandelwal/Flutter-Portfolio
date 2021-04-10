@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'MyPic_widget_desktop.dart';
 import 'about_view_intro_desktop.dart';
 
@@ -10,21 +11,20 @@ class AboutContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- About Me ---"
+    final AboutTitle = "About Me"
         .text
         .white
         .xl
-        .textStyle(GoogleFonts.rajdhani())
-        // .textStyle(GoogleFonts.poppins())
+        .textStyle(GoogleFonts.josefinSans())
         .lineHeight(1)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.0),
       child: Container(
-        // color: Color(0xff1E1E1E).withOpacity(0.8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
           gradient: LinearGradient(
@@ -45,27 +45,24 @@ class AboutContentDesktop extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            // Image(
-            //   image: AssetImage('background.png'),
-            // ),
             Align(alignment: Alignment.centerRight, child: MyPicAboutDesktop()),
-            ListView(
+            Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 40),
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
                   child: Align(
                     alignment: Alignment.center,
                     child: AboutTitle,
                   ),
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      IntroductionAboutDesktop(),
-                    ]),
               ],
             ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  IntroductionAboutDesktop(),
+                ]),
           ],
         ),
       ),

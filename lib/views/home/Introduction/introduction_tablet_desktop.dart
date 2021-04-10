@@ -38,7 +38,7 @@ class Introduction extends StatelessWidget {
         // "BELIEVE IN YOURSELF!\nThe only way to DISCOVER the limits of the POSSIBLE is to go beyond them into the IMPOSSIBLE.\n"
         "Hello! I'am Maulik Khandelwal.\n"
                 "I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune.\n"
-                "I am Software Developer who is passionate about creating technology to elevate people, and building community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel.\n"
+                "I am a Software Developer who is passionate about creating technology to elevate people and build community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel.\n"
             .text
             .white
             .size(23)
@@ -48,6 +48,7 @@ class Introduction extends StatelessWidget {
             .w(context.isMobile
                 ? context.screenWidth
                 : context.percentWidth * 40);
+    double width = MediaQuery.of(context).size.width * 0.005;
     return ListView(children: <Widget>[
       FadeAnimation(1, "- Introduction".text.gray500.widest.sm.make()),
       SizedBox(
@@ -80,15 +81,42 @@ class Introduction extends StatelessWidget {
           3.5,
           Row(
             children: [
-              LimitedBox(
-                maxWidth: 80,
-                child: VxBox()
-                    .color(Coolors.accentColor)
-                    .size(60, 10)
-                    .make()
-                    .px4()
-                    .shimmer(primaryColor: Coolors.accentColor),
+              Expanded(
+                flex: 1,
+                child: SizedBox(
+                  width: width,
+                ),
               ),
+              Expanded(
+                flex: 4,
+                child: LimitedBox(
+                  maxWidth: 180,
+                  child: VxBox()
+                      .color(Color(0xFF34B0F3))
+                      .size(60, 10)
+                      .make()
+                      .px4()
+                      .shimmer(primaryColor: Color(0xFF34B0F3)),
+                ),
+              ),
+              Expanded(
+                flex: 4,
+                child: LimitedBox(
+                  maxWidth: 180,
+                  child: VxBox()
+                      .color(Coolors.accentColor)
+                      .size(60, 10)
+                      .make()
+                      .px4()
+                      .shimmer(primaryColor: Coolors.accentColor),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: SizedBox(
+                  width: width,
+                ),
+              )
             ],
           )),
       SizedBox(
@@ -104,9 +132,9 @@ class Introduction extends StatelessWidget {
                   onPressed: () {
                     launch("https://google.com/");
                   },
-                  hoverColor: Vx.purple700,
+                  hoverColor: Color(0xFF34B0F3),
                   shape: Vx.roundedSm,
-                  color: Coolors.accentColor,
+                  color: Coolors.accentColor.withOpacity(1),
                   textColor: Coolors.primaryColor,
                   child: "Resume"
                       .text
@@ -114,7 +142,7 @@ class Introduction extends StatelessWidget {
                       .size(16)
                       .textStyle(GoogleFonts.rajdhani())
                       .make(),
-                ).h(50),
+                ).h(40),
               ).moveUpOnHover,
             ],
           )), // crossAlignment: CrossAxisAlignment.center,

@@ -47,7 +47,7 @@ class NameWidget extends StatelessWidget {
             0,
             0),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: BouncingScrollPhysics(),
           addAutomaticKeepAlives: true,
           children: <Widget>[
             FittedBox(
@@ -119,7 +119,8 @@ class NameWidget extends StatelessWidget {
                       speed: Duration(milliseconds: 50),
                       textStyle: GoogleFonts.rajdhani(
                           color: Colors.white,
-                          fontSize: height * 0.03,
+                          fontSize:
+                              context.isMobile ? height * 0.028 : height * 0.03,
                           fontWeight: FontWeight.w300),
                       text: [
                         " Student",

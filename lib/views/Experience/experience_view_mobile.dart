@@ -8,13 +8,13 @@ class ExperienceViewMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ExperienceTitle = "--- Where I've Studied/Worked ---"
+    final ExperienceTitle = "Where I've Studied/Worked"
         .text
-        .textStyle(GoogleFonts.rajdhani(fontWeight: FontWeight.w500))
         .white
         .xl
+        .textStyle(GoogleFonts.josefinSans())
         .lineHeight(1)
-        .size(context.isMobile ? 20 : 20)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
@@ -45,11 +45,11 @@ class ExperienceViewMobile extends StatelessWidget {
         child: ListView(
 //          shrinkWrap: true,
 //          physics: ClampingScrollPhysics(),
-          physics: NeverScrollableScrollPhysics(),
+          physics: BouncingScrollPhysics(),
           addAutomaticKeepAlives: true,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+              padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: ExperienceTitle,

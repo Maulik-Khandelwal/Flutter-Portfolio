@@ -9,14 +9,13 @@ class ExperienceViewDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ExperienceTitle = "--- Where I've Studied/Worked ---"
+    final ExperienceTitle = "Where I've Studied/Worked"
         .text
-        // .textStyle(GoogleFonts.poppins())
         .white
         .xl
-        .textStyle(GoogleFonts.rajdhani())
+        .textStyle(GoogleFonts.josefinSans())
         .lineHeight(1)
-        .size(context.isMobile ? 15 : 20)
+        .size(context.isMobile ? 25 : 30)
         .bold
         .make()
         .shimmer();
@@ -45,33 +44,26 @@ class ExperienceViewDesktop extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             ExperiencePictureWidget(),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15),
-              child: ListView(
-                physics: NeverScrollableScrollPhysics(),
-                addAutomaticKeepAlives: true,
-                children: [
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                        child: Align(
-                          alignment: Alignment.topCenter,
-                          child: ExperienceTitle,
-                        ),
-                      ),
-                      SizedBox(
-                        height: size.height * 0.07,
-                      ),
-                    ],
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: ExperienceTitle,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 40),
-                    child: ExperiencesDesktop(),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(size.width * 0.02, 100, 0, 10),
+                    child: ExperiencesDesktop(),
+                  )
+                ]),
           ],
         ),
       ),

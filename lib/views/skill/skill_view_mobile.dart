@@ -10,16 +10,6 @@ class SkillContentMobile extends StatelessWidget {
   const SkillContentMobile({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final AboutTitle = "--- Skills which I have ---"
-        .text
-        .white
-        .textStyle(GoogleFonts.rajdhani())
-        .xl
-        .lineHeight(1)
-        .size(context.isMobile ? 20 : 20)
-        .bold
-        .make()
-        .shimmer();
     return ClipRRect(
       borderRadius: BorderRadius.circular(20.0),
       child: Container(
@@ -39,28 +29,17 @@ class SkillContentMobile extends StatelessWidget {
           ),
         ),
         width: 600,
-        height: 1620,
-        child: ListView(
-//          shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            addAutomaticKeepAlives: true,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: AboutTitle,
-                ),
-              ),
-              // Align(alignment: Alignment.center, child: MyPicSkillMobile()),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: skillMobile(),
-              ),
-            ]),
+        height: MediaQuery.of(context).size.height,
+        child: Stack(fit: StackFit.expand, children: [
+          // Align(alignment: Alignment.center, child: MyPicSkillMobile()),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 20, 40),
+            child: skillMobile(),
+          ),
+        ]),
       ),
     );
   }
