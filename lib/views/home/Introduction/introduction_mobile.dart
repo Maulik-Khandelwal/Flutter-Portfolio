@@ -82,15 +82,9 @@ class Introduction extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    flex: 0,
-                    child: SizedBox(
-                      width: width,
-                    ),
-                  ),
-                  Expanded(
                     flex: 4,
                     child: LimitedBox(
-                      maxWidth: 180,
+                      maxWidth: 10,
                       child: VxBox()
                           .color(Color(0xFF34B0F3))
                           .size(60, 10)
@@ -102,7 +96,7 @@ class Introduction extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: LimitedBox(
-                      maxWidth: 180,
+                      maxWidth: 10,
                       child: VxBox()
                           .color(Coolors.accentColor)
                           .size(60, 10)
@@ -111,12 +105,6 @@ class Introduction extends StatelessWidget {
                           .shimmer(primaryColor: Coolors.accentColor),
                     ),
                   ),
-                  Expanded(
-                    flex: 0,
-                    child: SizedBox(
-                      width: width,
-                    ),
-                  )
                 ],
               )),
           SizedBox(
