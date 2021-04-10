@@ -172,6 +172,9 @@ class Skill extends StatelessWidget {
                 buildSkill(name: 'Algorithm', value: 6, fadeTime: 9.8),
                 buildSkill(name: 'Data structure', value: 8, fadeTime: 10),
                 buildSkill(name: 'MYSQL', value: 5, fadeTime: 10.2),
+                SizedBox(
+                  height: 60,
+                ),
               ],
             ),
           )

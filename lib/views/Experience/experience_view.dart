@@ -11,7 +11,8 @@ class ExperienceView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: ExperienceViewMobile(),
-      desktop: SingleChildScrollView(child: ExperienceViewDesktop()),
+      desktop: SingleChildScrollView(
+          physics: BouncingScrollPhysics(), child: ExperienceViewDesktop()),
     );
   }
 }

@@ -251,14 +251,15 @@ class Introduction extends StatelessWidget {
                     child: "Resume"
                         .text
                         .bold
+                        .center
                         .size(16)
                         .textStyle(GoogleFonts.rajdhani())
                         .make(),
                   ).h(40),
                 ).moveUpOnHover,
-                // SizedBox(
-                //   width: 20,
-                // ),
+                SizedBox(
+                  width: 60,
+                ),
                 // Expanded(
                 //   child: FadeAnimation(
                 //     7.8,

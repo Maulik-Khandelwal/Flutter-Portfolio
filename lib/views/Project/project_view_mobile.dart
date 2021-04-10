@@ -43,7 +43,6 @@ class ProjectViewMobile extends StatelessWidget {
         width: 600,
         height: 1800,
         child: ListView(
-//          shrinkWrap: true,
             physics: BouncingScrollPhysics(),
             addAutomaticKeepAlives: true,
             children: <Widget>[
