@@ -82,28 +82,30 @@ class Introduction extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    flex: 4,
-                    child: LimitedBox(
-                      maxWidth: 10,
-                      child: VxBox()
-                          .color(Color(0xFF34B0F3))
-                          .size(60, 10)
-                          .make()
-                          .px4()
-                          .shimmer(primaryColor: Color(0xFF34B0F3)),
+                    flex: 32,
+                    child: Divider(
+                      color: Color(0xFF34B0F3),
+                      height: 20,
+                      thickness: 10,
+                      // indent: MediaQuery.of(context).size.width * 0.07,
+                      // endIndent: MediaQuery.of(context).size.width * 0.07,
+                    ).shimmer(primaryColor: Color(0xFF34B0F3)),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: SizedBox(
+                      height: 20,
                     ),
                   ),
                   Expanded(
-                    flex: 4,
-                    child: LimitedBox(
-                      maxWidth: 10,
-                      child: VxBox()
-                          .color(Coolors.accentColor)
-                          .size(60, 10)
-                          .make()
-                          .px4()
-                          .shimmer(primaryColor: Coolors.accentColor),
-                    ),
+                    flex: 32,
+                    child: Divider(
+                      color: Coolors.accentColor,
+                      height: 20,
+                      thickness: 10,
+                      // indent: MediaQuery.of(context).size.width * 0.07,
+                      // endIndent: MediaQuery.of(context).size.width * 0.07,
+                    ).shimmer(primaryColor: Coolors.accentColor),
                   ),
                 ],
               )),

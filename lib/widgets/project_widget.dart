@@ -7,8 +7,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/models/projectCard.dart';
 import 'dart:html' as html;
 
-import 'package:url_launcher/url_launcher.dart';
-
 import 'custom_text/custom_text.dart';
 import 'method/method.dart';
 

@@ -15,7 +15,7 @@ class AboutContentDesktop extends StatelessWidget {
         .text
         .white
         .xl
-        .textStyle(GoogleFonts.josefinSans())
+        .textStyle(GoogleFonts.barriecito())
         .lineHeight(1)
         .size(context.isMobile ? 25 : 30)
         .bold

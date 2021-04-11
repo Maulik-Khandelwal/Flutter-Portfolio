@@ -120,7 +120,7 @@ class Introduction extends StatelessWidget {
             ],
           )),
       SizedBox(
-        height: 25,
+        height: 30,
       ),
       FadeAnimation(
           4,

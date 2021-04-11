@@ -68,8 +68,8 @@ class Introduction extends StatelessWidget {
         .text
         .white
         .xl
-        .textStyle(GoogleFonts.josefinSans())
-        .lineHeight(1)
+        .textStyle(GoogleFonts.barriecito())
+        // .lineHeight(1)
         .size(context.isMobile ? 25 : 30)
         .bold
         .make()
@@ -233,7 +233,7 @@ class Introduction extends StatelessWidget {
             height: 20,
           ),
           FadeAnimation(
-            7.8,
+            1,
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -258,7 +258,7 @@ class Introduction extends StatelessWidget {
                   ).h(40),
                 ).moveUpOnHover,
                 SizedBox(
-                  width: 60,
+                  height: 60,
                 ),
                 // Expanded(
                 //   child: FadeAnimation(
