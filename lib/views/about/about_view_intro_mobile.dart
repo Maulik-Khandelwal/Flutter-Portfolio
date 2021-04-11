@@ -257,9 +257,7 @@ class Introduction extends StatelessWidget {
                         .make(),
                   ).h(40),
                 ).moveUpOnHover,
-                SizedBox(
-                  height: 60,
-                ),
+
                 // Expanded(
                 //   child: FadeAnimation(
                 //     7.8,
@@ -274,7 +272,10 @@ class Introduction extends StatelessWidget {
                 // ),
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 60,
+          ),
         ]);
   }
 }

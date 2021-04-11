@@ -61,8 +61,9 @@ class ExperienceViewMobile extends StatelessWidget {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 40),
-              child: ExperiencesMobile(),
+              padding: const EdgeInsets.only(bottom: 5),
+              child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(), child: ExperiencesMobile()),
             ),
           ],
         ),

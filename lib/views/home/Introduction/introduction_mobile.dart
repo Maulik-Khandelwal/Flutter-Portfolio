@@ -89,7 +89,7 @@ class Introduction extends StatelessWidget {
                       thickness: 10,
                       // indent: MediaQuery.of(context).size.width * 0.07,
                       // endIndent: MediaQuery.of(context).size.width * 0.07,
-                    ).shimmer(primaryColor: Color(0xFF34B0F3)),
+                    ),
                   ),
                   Expanded(
                     flex: 1,
@@ -105,7 +105,7 @@ class Introduction extends StatelessWidget {
                       thickness: 10,
                       // indent: MediaQuery.of(context).size.width * 0.07,
                       // endIndent: MediaQuery.of(context).size.width * 0.07,
-                    ).shimmer(primaryColor: Coolors.accentColor),
+                    ),
                   ),
                 ],
               )),
