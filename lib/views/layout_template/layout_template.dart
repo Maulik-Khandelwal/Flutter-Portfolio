@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/Animations/Particles.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/routing/route_names.dart';
 import 'package:portfolio/routing/router.dart';
@@ -16,17 +17,19 @@ class LayoutTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
         drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? NavigationDrawer()
             : null,
         resizeToAvoidBottomInset: false,
-        backgroundColor: Coolors.primaryColor,
+        backgroundColor: Colors.black,
         body: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            PictureWidget(),
+            // PictureWidget(),
+            Particle(size.height, size.width),
             Align(alignment: Alignment.bottomCenter, child: Footer()),
             CenteredView(
               child: Column(children: <Widget>[
@@ -109,4 +112,26 @@ class Footer extends StatelessWidget {
       ),
     );
   }
+}
+
+class MyPainter extends CustomPainter {
+  Paint _paint = Paint();
+  double x = 0;
+  double y = 0;
+
+  MyPainter(double left, double top) {
+    _paint..color = Colors.white.withOpacity(0.3);
+    x = left;
+    y = top;
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawArc(Rect.fromCenter(center: Offset(x, y), width: 40, height: 40),
+        0, 60, true, _paint);
+    // canvas.drawCircle(Offset(x,y), 40, _paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) => true;
 }

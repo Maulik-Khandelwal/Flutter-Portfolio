@@ -4,6 +4,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:portfolio/Animations/FadeAnimation.dart';
+import 'package:portfolio/Animations/latter.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -17,19 +18,38 @@ class NameWidget extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    final s = "Maulik\nKhandelwal."
-        .text
-        .white
-        .xl4
-        // .textStyle(GoogleFonts.cormorantGaramond())
-        .textStyle(GoogleFonts.pressStart2p())
-        .lineHeight(1.4)
-        .maxLines(2)
-        .size(context.isMobile ? 8 : 20)
-        // .bold
-        .make()
-        .shimmer();
-
+    final s = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            FadeAnimation(2, Word("M")),
+            FadeAnimation(2.1, Word("a")),
+            FadeAnimation(2.2, Word("u")),
+            FadeAnimation(2.3, Word("l")),
+            FadeAnimation(2.4, Word("i")),
+            FadeAnimation(2.5, Word("k")),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            FadeAnimation(2, Word("K")),
+            FadeAnimation(2.4, Word("h")),
+            FadeAnimation(2.5, Word("a")),
+            FadeAnimation(2.6, Word("n")),
+            FadeAnimation(2.7, Word("d")),
+            FadeAnimation(2.8, Word("e")),
+            FadeAnimation(2.9, Word("l")),
+            FadeAnimation(3, Word("w")),
+            FadeAnimation(3.1, Word("a")),
+            FadeAnimation(3.2, Word("l")),
+            FadeAnimation(3.3, Word(".")),
+          ],
+        )
+      ],
+    );
     final SNameWidget = context.isMobile
         ? FittedBox(
             fit: BoxFit.fitWidth,
@@ -56,40 +76,39 @@ class NameWidget extends StatelessWidget {
                 1,
                 Row(
                   children: [
-                    Text(
-                      "WELCOME TO MY",
-                      style: GoogleFonts.rajdhani(
-                        color: Coolors.accentColor,
-                        fontSize: 25,
-                      ),
-                    ),
-                    // Align(
-                    //     alignment: Alignment.topLeft,
-                    //     child: Image.asset(
-                    //       "assets/home1.gif",
-                    //       height: height * 0.07,
-                    //     ).shimmer(
-                    //         primaryColor: Coolors.accentColor,
-                    //         showAnimation: false)),
-                    Text(
-                      " PORTFOLIO",
-                      style: GoogleFonts.rajdhani(
-                        color: Color(0xFF34B0F3),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "import",
+                            style: GoogleFonts.homemadeApple(
+                              fontSize: 30,
+                              color: Coolors.accentColor,
+                              // wordSpacing: 10,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "   'package:flutter/MyPortfolio.dart';",
+                            style: GoogleFonts.sofadiOne(
+                              fontSize: 30,
+                              color: Color(0xffFDB99B),
+                              // wordSpacing: 30,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
-                      width: width * 0.25,
+                      width: width * 0.15,
                     )
                   ],
                 ),
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 7,
             ),
-            FadeAnimation(2, SNameWidget),
+            SNameWidget,
             SizedBox(
               height: 30,
             ),
@@ -107,7 +126,7 @@ class NameWidget extends StatelessWidget {
             //   ],
             // ),
             FadeAnimation(
-              3,
+              4.2,
               Row(
                 children: [
                   Icon(
@@ -163,7 +182,7 @@ class SocialAccounts extends StatelessWidget {
   Widget build(BuildContext context) {
     return [
       FadeAnimation(
-        4,
+        5.2,
         Icon(
           AntDesign.mail,
           color: Colors.white,
@@ -176,7 +195,7 @@ class SocialAccounts extends StatelessWidget {
       ),
       20.widthBox,
       FadeAnimation(
-          4.25,
+          5.45,
           Icon(
             AntDesign.twitter,
             color: Colors.white,
@@ -188,7 +207,7 @@ class SocialAccounts extends StatelessWidget {
               .moveUpOnHover),
       20.widthBox,
       FadeAnimation(
-          4.5,
+          5.7,
           Icon(
             AntDesign.instagram,
             color: Colors.white,
@@ -200,7 +219,7 @@ class SocialAccounts extends StatelessWidget {
               .moveUpOnHover),
       20.widthBox,
       FadeAnimation(
-          4.75,
+          5.95,
           Icon(
             AntDesign.linkedin_square,
             color: Colors.white,
@@ -213,7 +232,7 @@ class SocialAccounts extends StatelessWidget {
               .moveUpOnHover),
       20.widthBox,
       FadeAnimation(
-          5,
+          6.2,
           Icon(
             AntDesign.github,
             color: Colors.white,
