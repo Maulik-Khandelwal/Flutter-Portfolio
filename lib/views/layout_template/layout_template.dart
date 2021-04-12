@@ -28,7 +28,7 @@ class LayoutTemplate extends StatelessWidget {
         body: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            // PictureWidget(),
+            PictureWidget(),
             Particle(size.height, size.width),
             Align(alignment: Alignment.bottomCenter, child: Footer()),
             CenteredView(
@@ -61,13 +61,13 @@ class PictureWidget extends StatelessWidget {
       mobile: Image(
         image: new AssetImage("assets/BGM1.jpg"),
         fit: BoxFit.cover,
-        color: Colors.black87.withOpacity(0.7),
+        color: Colors.black87.withOpacity(0.9),
         colorBlendMode: BlendMode.darken,
       ),
       desktop: Image(
         image: new AssetImage("assets/BG.jpg"),
         fit: BoxFit.cover,
-        color: Colors.black87.withOpacity(0.7),
+        color: Colors.black87.withOpacity(0.9),
         colorBlendMode: BlendMode.darken,
       ),
     );
