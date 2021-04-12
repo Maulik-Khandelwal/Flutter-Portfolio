@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'dart:math' as math;
 
 import 'package:responsive_builder/responsive_builder.dart';
@@ -107,7 +108,7 @@ class _ParticleState extends State<Particle> with TickerProviderStateMixin {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         if (sizingInformation.isMobile) {
-          controller.stop();
+          controller.repeat();
         } else {
           controller.repeat();
         }
@@ -144,19 +145,19 @@ class _ParticleState extends State<Particle> with TickerProviderStateMixin {
 
 class MyPainter extends CustomPainter {
   Paint circlePen = Paint()
-    ..color = Colors.white.withOpacity(0.4)
+    ..color = Color(0xFF34B0F3).withOpacity(0.4)
     ..style = PaintingStyle.fill
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1;
 
   Paint linePen = Paint()
-    ..color = Colors.white
+    ..color = Color(0xFF34B0F3)
     ..style = PaintingStyle.stroke
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1.5;
 
   Paint circleLinePen = Paint()
-    ..color = Colors.white
+    ..color = Color(0xFF34B0F3)
     ..style = PaintingStyle.stroke
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1;
@@ -201,7 +202,10 @@ class MyPainter extends CustomPainter {
       canvas.drawCircle(
         list[i],
         particleSize[i],
-        circlePen..color = Colors.white.withOpacity(opacity[i]),
+        circlePen
+          ..color = i % 2 == 0
+              ? Color(0xFF34B0F3).withOpacity(opacity[i])
+              : Coolors.accentColor.withOpacity(opacity[i]),
       );
     }
   }
