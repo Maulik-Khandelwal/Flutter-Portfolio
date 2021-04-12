@@ -97,7 +97,7 @@ class Introduction extends StatelessWidget {
         ),
         FadeAnimation(
             3,
-            "I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune. I am a Software Developer who is passionate about creating technology to elevate people and build community, and a Learning Enthusiast, who is obsessed with the idea of improving himself and wants a platform to grow and excel. I am a 2nd Year Computer Science Engineering undergraduate from Vishwakarma Institute of Technology, Pune."
+            "I am a 2nd Year Computer Science Engineering undergraduate from India.\nI'm a Software Developer who loves puzzles and problem solving.\nA Competetive programmer from time to time.\nInterested in Flutter, Machine Learning, Deep Learning and Software Development in general.\nAnd a person who loves Cricket, Anime, Music and anything related to tech and also a Petrolhead."
                 .text
                 .color(Color(0xff717C99))
                 .xl2
