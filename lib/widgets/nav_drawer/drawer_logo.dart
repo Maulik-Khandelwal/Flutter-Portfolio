@@ -47,7 +47,7 @@ class NavbarLogoMob extends StatelessWidget {
             Text(
               "Maulik Khandelwal",
               style: TextStyle(
-                  color: Color(0xFF34B0F3),
+                  color: Coolors.accentBlue,
                   fontFamily: "Agustina",
                   fontSize: 16),
             ),
@@ -90,7 +90,7 @@ class NavbarLogoDesk extends StatelessWidget {
       //     Text(
       //       'Maulik Khandelwal',
       //       style: GoogleFonts.stalemate(
-      //         color: Color(0xFF34B0F3),
+      //         color: Coolors.accentBlue,
       //         fontSize: 30,
       //       ),
       //     ),

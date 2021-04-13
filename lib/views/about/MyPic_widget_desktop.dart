@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:scratcher/scratcher.dart';
 
@@ -44,7 +45,7 @@ class MyPicWidget extends StatelessWidget {
             child: ClipRect(
               // color: Color(0xFF616161).withOpacity(0),
               child: Container(
-                color: Color(0xFF34B0F3),
+                color: Coolors.accentBlue,
                 child: Container(
                   margin: EdgeInsets.all(2.75),
                   height: size.height / 2,

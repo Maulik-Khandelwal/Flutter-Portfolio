@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MyPicAboutMobile extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyPicAboutMobile extends StatelessWidget {
     final rad = MediaQuery.of(context).size.width * 0.25;
     return CircleAvatar(
       radius: rad,
-      backgroundColor: Color(0xFF34B0F3),
+      backgroundColor: Coolors.accentBlue,
       child: CircleAvatar(
         radius: rad - 4,
         backgroundImage: AssetImage('assets/hack.jpg'),

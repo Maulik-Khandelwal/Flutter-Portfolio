@@ -92,11 +92,11 @@ class Introduction extends StatelessWidget {
                 child: LimitedBox(
                   maxWidth: 180,
                   child: VxBox()
-                      .color(Color(0xFF34B0F3))
+                      .color(Coolors.accentBlue)
                       .size(60, 10)
                       .make()
                       .px4()
-                      .shimmer(primaryColor: Color(0xFF34B0F3)),
+                      .shimmer(primaryColor: Coolors.accentBlue),
                 ),
               ),
               Expanded(
@@ -132,7 +132,7 @@ class Introduction extends StatelessWidget {
                   onPressed: () {
                     launch("https://google.com/");
                   },
-                  hoverColor: Color(0xFF34B0F3),
+                  hoverColor: Coolors.accentBlue,
                   shape: Vx.roundedSm,
                   color: Coolors.accentColor.withOpacity(1),
                   textColor: Coolors.primaryColor,

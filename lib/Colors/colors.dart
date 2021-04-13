@@ -7,6 +7,7 @@ mixin Coolors {
   static const Color background = Color(0x36454F);
   // static const Color accentColor = Color(0xff813362);
   static Color accentColor = Vx.purple400;
+  static Color accentBlue = Color(0xFF34B0F3);
   static Color navBarColor = Vx.orange400;
   static List<Color> colors = [
     Vx.green400,

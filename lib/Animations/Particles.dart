@@ -145,19 +145,19 @@ class _ParticleState extends State<Particle> with TickerProviderStateMixin {
 
 class MyPainter extends CustomPainter {
   Paint circlePen = Paint()
-    ..color = Color(0xFF34B0F3).withOpacity(0.4)
+    ..color = Coolors.accentBlue.withOpacity(0.4)
     ..style = PaintingStyle.fill
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1;
 
   Paint linePen = Paint()
-    ..color = Color(0xFF34B0F3)
+    ..color = Coolors.accentBlue
     ..style = PaintingStyle.stroke
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1.5;
 
   Paint circleLinePen = Paint()
-    ..color = Color(0xFF34B0F3)
+    ..color = Coolors.accentBlue
     ..style = PaintingStyle.stroke
     ..strokeCap = StrokeCap.round
     ..strokeWidth = 1;
@@ -204,7 +204,7 @@ class MyPainter extends CustomPainter {
         particleSize[i],
         circlePen
           ..color = i % 2 == 0
-              ? Color(0xFF34B0F3).withOpacity(opacity[i])
+              ? Coolors.accentBlue.withOpacity(opacity[i])
               : Coolors.accentColor.withOpacity(opacity[i]),
       );
     }

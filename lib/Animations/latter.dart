@@ -19,7 +19,7 @@ class _WordState extends State<Word> with SingleTickerProviderStateMixin {
   AnimationController animationController;
 
   Color color = Colors.white;
-
+  int flag = 1;
   double fontsize = 50;
 
   @override
@@ -67,7 +67,8 @@ class _WordState extends State<Word> with SingleTickerProviderStateMixin {
           },
           onTapUp: (t) {
             setState(() {
-              color = Color(0xFF34B0F3);
+              color = flag == 1 ? Coolors.accentBlue : Colors.white;
+              color == Colors.white ? flag = 1 : flag = 0;
             });
           },
           child: MouseRegion(
@@ -81,7 +82,8 @@ class _WordState extends State<Word> with SingleTickerProviderStateMixin {
             },
             onExit: (event) {
               setState(() {
-                color = Color(0xFF34B0F3);
+                color = flag == 1 ? Coolors.accentBlue : Colors.white;
+                color == Colors.white ? flag = 1 : flag = 0;
               });
             },
             child: ScaleTransition(

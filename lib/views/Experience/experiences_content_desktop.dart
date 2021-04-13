@@ -18,7 +18,7 @@ class ExperiencesDesktop extends StatelessWidget {
       child: Steps(
         direction: Axis.vertical,
         size: 20.0,
-        path: {'color': Color(0xFF34B0F3), 'width': 2.75},
+        path: {'color': Coolors.accentBlue, 'width': 2.75},
         steps: [
           {
             'color': Color(0xff64FFDA),

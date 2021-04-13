@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Animations/FadeAnimation.dart';
+import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -69,7 +70,7 @@ class Skill extends StatelessWidget {
     for (int index = 0; index < 10; index++) {
       var color = Color(0xff717C99);
       if (index < value) {
-        color = Color(0xFF34B0F3);
+        color = Coolors.accentBlue;
       }
       widgets.add(Container(
         height: size,

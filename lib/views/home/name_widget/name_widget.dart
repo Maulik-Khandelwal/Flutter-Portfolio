@@ -35,17 +35,17 @@ class NameWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            FadeAnimation(2, Word("K")),
-            FadeAnimation(2.4, Word("h")),
-            FadeAnimation(2.5, Word("a")),
-            FadeAnimation(2.6, Word("n")),
-            FadeAnimation(2.7, Word("d")),
-            FadeAnimation(2.8, Word("e")),
-            FadeAnimation(2.9, Word("l")),
-            FadeAnimation(3, Word("w")),
-            FadeAnimation(3.1, Word("a")),
+            FadeAnimation(2.6, Word("K")),
+            FadeAnimation(2.7, Word("h")),
+            FadeAnimation(2.8, Word("a")),
+            FadeAnimation(2.9, Word("n")),
+            FadeAnimation(3, Word("d")),
+            FadeAnimation(3.1, Word("e")),
             FadeAnimation(3.2, Word("l")),
-            FadeAnimation(3.3, Word(".")),
+            FadeAnimation(3.3, Word("w")),
+            FadeAnimation(3.4, Word("a")),
+            FadeAnimation(3.5, Word("l")),
+            FadeAnimation(3.6, Word(".")),
           ],
         )
       ],
@@ -126,7 +126,7 @@ class NameWidget extends StatelessWidget {
             //   ],
             // ),
             FadeAnimation(
-              4.2,
+              4.6,
               Row(
                 children: [
                   Icon(

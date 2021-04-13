@@ -20,7 +20,7 @@ class ExperiencesMobile extends StatelessWidget {
       child: Steps(
         direction: Axis.vertical,
         size: 20.0,
-        path: {'color': Color(0xFF34B0F3), 'width': 2.75},
+        path: {'color': Coolors.accentBlue, 'width': 2.75},
         steps: [
           {
             'color': Color(0xff64FFDA),
@@ -185,7 +185,7 @@ class ExperiencesMobile extends StatelessWidget {
           },
           // {
           //   'color': Color(0xff64FFDA),
-          //   'background': Color(0xFF34B0F3),
+          //   'background': Coolors.accentBlue,
           //   'label': "📱",
           //   'content': Column(
           //     crossAxisAlignment: CrossAxisAlignment.start,

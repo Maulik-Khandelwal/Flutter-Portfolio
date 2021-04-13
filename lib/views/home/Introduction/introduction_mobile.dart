@@ -84,7 +84,7 @@ class Introduction extends StatelessWidget {
                   Expanded(
                     flex: 32,
                     child: Divider(
-                      color: Color(0xFF34B0F3),
+                      color: Coolors.accentBlue,
                       height: 20,
                       thickness: 10,
                       // indent: MediaQuery.of(context).size.width * 0.07,
@@ -122,7 +122,7 @@ class Introduction extends StatelessWidget {
                       onPressed: () {
                         launch("https://google.com/");
                       },
-                      hoverColor: Color(0xFF34B0F3),
+                      hoverColor: Coolors.accentBlue,
                       shape: Vx.roundedSm,
                       color: Coolors.accentColor.withOpacity(1),
                       textColor: Coolors.primaryColor,

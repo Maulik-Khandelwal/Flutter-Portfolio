@@ -40,7 +40,7 @@ class Introduction extends StatelessWidget {
         children: [
           Icon(
             Icons.play_arrow,
-            color: Color(0xFF34B0F3),
+            color: Coolors.accentBlue,
             size: 14.0,
           ),
           SizedBox(
@@ -94,7 +94,7 @@ class Introduction extends StatelessWidget {
               2,
               "Who am I?"
                   .text
-                  .color(Color(0xFF34B0F3))
+                  .color(Coolors.accentBlue)
                   .xl2
                   .textStyle(
                       GoogleFonts.montserrat(fontWeight: FontWeight.w300))
@@ -150,7 +150,7 @@ class Introduction extends StatelessWidget {
               5,
               "Technologies I have worked with:\n\n"
                   .text
-                  .color(Color(0xFF34B0F3))
+                  .color(Coolors.accentBlue)
                   .size(15)
                   .bold
                   .letterSpacing(0.75)
@@ -244,7 +244,7 @@ class Introduction extends StatelessWidget {
                     onPressed: () {
                       launch("https://google.com/");
                     },
-                    hoverColor: Color(0xFF34B0F3),
+                    hoverColor: Coolors.accentBlue,
                     shape: Vx.roundedSm,
                     color: Coolors.accentColor.withOpacity(1),
                     textColor: Coolors.primaryColor,
