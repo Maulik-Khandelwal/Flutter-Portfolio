@@ -25,7 +25,6 @@ class _ParticleState extends State<Particle> with TickerProviderStateMixin {
 
   Offset pointerOffset = Offset(150, 150);
 
-  int maxParticles = 100;
   double maxSize = 3;
 
   List<Offset> offsets = [];
@@ -41,7 +40,7 @@ class _ParticleState extends State<Particle> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
-    for (var i = 0; i < maxParticles; i++) {
+    for (var i = 0; i < (widget.width > 500 ? 100 : 40); i++) {
       offsets.add(
         Offset(
           math.Random().nextDouble() * widget.width,

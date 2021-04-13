@@ -59,15 +59,15 @@ class PictureWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: Image(
-        image: new AssetImage("assets/watercolor3.jpg"),
+        image: new AssetImage("assets/BGM1.jpg"),
         fit: BoxFit.cover,
         color: Colors.black87.withOpacity(0.9),
         colorBlendMode: BlendMode.darken,
       ),
       desktop: Image(
-        image: new AssetImage("assets/watercolor3.jpg"),
+        image: new AssetImage("assets/BGM1.jpg"),
         fit: BoxFit.cover,
-        color: Colors.black87.withOpacity(0.9),
+        color: Colors.black87.withOpacity(0.8),
         colorBlendMode: BlendMode.darken,
       ),
     );
