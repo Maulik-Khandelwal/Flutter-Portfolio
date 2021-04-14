@@ -67,7 +67,7 @@ class PictureWidget extends StatelessWidget {
       desktop: Image(
         image: new AssetImage("assets/123.jpg"),
         fit: BoxFit.cover,
-        color: Colors.black87.withOpacity(0.75),
+        color: Colors.black87.withOpacity(0.72),
         colorBlendMode: BlendMode.darken,
       ),
     );
@@ -90,7 +90,7 @@ class Footer extends StatelessWidget {
         child: Text(
           "\n\n\nDesigned & Built by Maulik Khandelwal 💙 Flutter",
           style: GoogleFonts.poppins(
-            color: Colors.white.withOpacity(0.4),
+            color: Colors.white.withOpacity(0.5),
             letterSpacing: 1.75,
             fontSize: 14.0,
           ),

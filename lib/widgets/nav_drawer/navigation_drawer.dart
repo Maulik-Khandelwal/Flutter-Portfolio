@@ -35,6 +35,7 @@ class NavigationDrawer extends StatelessWidget {
           DrawerItem('Skills', Icons.bar_chart, SkillRoute),
           DrawerItem('Experience', Icons.work, ExperienceRoute),
           DrawerItem('Projects', Icons.palette, ProjectRoute),
+          DrawerItem('Contact', Icons.mail, ContactRoute),
           // SizedBox(
           //   height: MediaQuery.of(context).size.height * 0.08,
           // ),

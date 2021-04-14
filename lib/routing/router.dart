@@ -3,6 +3,7 @@ import 'package:portfolio/routing/route_names.dart';
 import 'package:portfolio/views/Experience/experience_view.dart';
 import 'package:portfolio/views/Project/project_view.dart';
 import 'package:portfolio/views/about/about_view.dart';
+import 'package:portfolio/views/contact/contact_view.dart';
 import 'package:portfolio/views/home/home_view.dart';
 import 'package:portfolio/views/skill/skill_view.dart';
 
@@ -19,6 +20,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(ExperienceView());
     case ProjectRoute:
       return _getPageRoute(ProjectView());
+    case ContactRoute:
+      return _getPageRoute(ContactView());
     default:
       return _getPageRoute(HomeView());
   }

@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 mixin Coolors {
@@ -19,4 +20,21 @@ mixin Coolors {
     Vx.pink400,
     Vx.purple400,
   ];
+
+  static final Gradient gradientWithOutHover = LinearGradient(
+    colors: [
+      Colors.transparent,
+      Colors.transparent,
+    ],
+  );
+
+  static final Gradient gradientOnHover = LinearGradient(
+    colors: [accentColor, accentBlue],
+  );
+
+  static final Color fontColorWihtoutHover = accentBlue;
+
+  static final Color fontColorOnHover = Coolors.primaryColor;
+
+  static final Border border = Border.all(color: accentBlue);
 }

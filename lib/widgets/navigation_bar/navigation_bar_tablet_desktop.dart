@@ -21,21 +21,25 @@ class NavigationBarTabletDesktop extends StatelessWidget {
               children: <Widget>[
                 NavBarItem('Home', HomeRoute).moveUpOnHover,
                 SizedBox(
-                  width: 60,
+                  width: 50,
                 ),
                 NavBarItem('About', AboutRoute).moveUpOnHover,
                 SizedBox(
-                  width: 60,
+                  width: 50,
                 ),
                 NavBarItem('Skills', SkillRoute).moveUpOnHover,
                 SizedBox(
-                  width: 60,
+                  width: 50,
                 ),
                 NavBarItem('Experience', ExperienceRoute).moveUpOnHover,
                 SizedBox(
-                  width: 60,
+                  width: 50,
                 ),
                 NavBarItem('Projects', ProjectRoute).moveUpOnHover,
+                SizedBox(
+                  width: 50,
+                ),
+                NavBarItem('Contact', ContactRoute).moveUpOnHover,
               ],
             )
           ]),
