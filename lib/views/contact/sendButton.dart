@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'AlertBanner.dart';
+import 'package:portfolio/extensions/hover_extensions.dart';
 import 'emailDataProvider.dart';
 
 class Send extends StatefulWidget {
@@ -47,24 +48,27 @@ class _SendState extends State<Send> {
             fontColor = Theme.of(context).accentColor;
           });
         },
-        child: Container(
-          height: 50,
-          width: 100,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            gradient: gradient,
-            border: Coolors.border,
-          ),
-          child: Text(
-            "SEND",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: fontColor,
-              fontSize: 12,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10.0),
+          child: Container(
+            height: 50,
+            width: 100,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              gradient: gradient,
+              border: Coolors.border,
+            ),
+            child: Text(
+              "SEND",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: fontColor,
+                fontSize: 12,
+              ),
             ),
           ),
         ),
       ),
-    );
+    ).moveUpOnHover;
   }
 }

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
+import 'package:portfolio/widgets/resumeButton.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
@@ -238,38 +239,39 @@ class Introduction extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                LimitedBox(
-                  maxWidth: 150,
-                  child: RaisedButton(
-                    onPressed: () {
-                      launch("https://google.com/");
-                    },
-                    hoverColor: Coolors.accentBlue,
-                    shape: Vx.roundedSm,
-                    color: Coolors.accentColor.withOpacity(1),
-                    textColor: Coolors.primaryColor,
-                    child: "Resume"
-                        .text
-                        .bold
-                        .center
-                        .size(16)
-                        .textStyle(GoogleFonts.rajdhani())
-                        .make(),
-                  ).h(40),
-                ).moveUpOnHover,
-
-                // Expanded(
-                //   child: FadeAnimation(
-                //     7.8,
-                //     Divider(
-                //       color: Coolors.accentColor.withOpacity(0.7),
-                //       height: 20,
-                //       thickness: 2,
-                //       indent: 20,
-                //       endIndent: MediaQuery.of(context).size.width * 0.14,
-                //     ),
-                //   ),
-                // ),
+                ResumeMobile()
+                // LimitedBox(
+                //   maxWidth: 150,
+                //   child: RaisedButton(
+                //     onPressed: () {
+                //       launch("https://google.com/");
+                //     },
+                //     hoverColor: Coolors.accentBlue,
+                //     shape: Vx.roundedSm,
+                //     color: Coolors.accentColor.withOpacity(1),
+                //     textColor: Coolors.primaryColor,
+                //     child: "Resume"
+                //         .text
+                //         .bold
+                //         .center
+                //         .size(16)
+                //         .textStyle(GoogleFonts.rajdhani())
+                //         .make(),
+                //   ).h(40),
+                // ).moveUpOnHover,
+                //
+                // // Expanded(
+                // //   child: FadeAnimation(
+                // //     7.8,
+                // //     Divider(
+                // //       color: Coolors.accentColor.withOpacity(0.7),
+                // //       height: 20,
+                // //       thickness: 2,
+                // //       indent: 20,
+                // //       endIndent: MediaQuery.of(context).size.width * 0.14,
+                // //     ),
+                // //   ),
+                // // ),
               ],
             ),
           ),

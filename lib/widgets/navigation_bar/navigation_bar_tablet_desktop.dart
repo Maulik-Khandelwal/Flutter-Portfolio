@@ -12,37 +12,41 @@ class NavigationBarTabletDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            NavBarLogo(),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                NavBarItem('Home', HomeRoute).moveUpOnHover,
-                SizedBox(
-                  width: 50,
-                ),
-                NavBarItem('About', AboutRoute).moveUpOnHover,
-                SizedBox(
-                  width: 50,
-                ),
-                NavBarItem('Skills', SkillRoute).moveUpOnHover,
-                SizedBox(
-                  width: 50,
-                ),
-                NavBarItem('Experience', ExperienceRoute).moveUpOnHover,
-                SizedBox(
-                  width: 50,
-                ),
-                NavBarItem('Projects', ProjectRoute).moveUpOnHover,
-                SizedBox(
-                  width: 50,
-                ),
-                NavBarItem('Contact', ContactRoute).moveUpOnHover,
-              ],
-            )
-          ]),
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.04),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              NavBarLogo(),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  NavBarItem('Home', HomeRoute).moveUpOnHover,
+                  SizedBox(
+                    width: 50,
+                  ),
+                  NavBarItem('About', AboutRoute).moveUpOnHover,
+                  SizedBox(
+                    width: 50,
+                  ),
+                  NavBarItem('Skills', SkillRoute).moveUpOnHover,
+                  SizedBox(
+                    width: 50,
+                  ),
+                  NavBarItem('Experience', ExperienceRoute).moveUpOnHover,
+                  SizedBox(
+                    width: 50,
+                  ),
+                  NavBarItem('Projects', ProjectRoute).moveUpOnHover,
+                  SizedBox(
+                    width: 50,
+                  ),
+                  NavBarItem('Contact', ContactRoute).moveUpOnHover,
+                ],
+              )
+            ]),
+      ),
     );
   }
 }

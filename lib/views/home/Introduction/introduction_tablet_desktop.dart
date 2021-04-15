@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/Colors/colors.dart';
+import 'package:portfolio/views/contact/CosWave.dart';
+import 'package:portfolio/views/contact/SineWave.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
+import 'package:portfolio/widgets/resumeButton.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
@@ -11,7 +14,7 @@ class IntroductionTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double c_width = MediaQuery.of(context).size.width * 0.5;
-    double c_height = MediaQuery.of(context).size.height * 0.61;
+    double c_height = MediaQuery.of(context).size.height * 0.71;
     return Container(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
       width: c_width,
@@ -79,71 +82,34 @@ class Introduction extends StatelessWidget {
       FadeAnimation(3, introWidget),
       FadeAnimation(
           3.5,
-          Row(
-            children: [
-              Expanded(
-                flex: 1,
-                child: SizedBox(
-                  width: width,
-                ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Stack(children: [
+              // Particle(size.height, size.width),
+              SineWave(
+                size: Size(MediaQuery.of(context).size.width, 80),
+                xOffset: 0,
+                yOffset: 0,
+                color: Colors.red,
               ),
-              Expanded(
-                flex: 4,
-                child: LimitedBox(
-                  maxWidth: 180,
-                  child: VxBox()
-                      .color(Coolors.accentBlue)
-                      .size(60, 10)
-                      .make()
-                      .px4()
-                      .shimmer(primaryColor: Coolors.accentBlue),
-                ),
-              ),
-              Expanded(
-                flex: 4,
-                child: LimitedBox(
-                  maxWidth: 180,
-                  child: VxBox()
-                      .color(Coolors.accentColor)
-                      .size(60, 10)
-                      .make()
-                      .px4()
-                      .shimmer(primaryColor: Coolors.accentColor),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: SizedBox(
-                  width: width,
+              Opacity(
+                opacity: 0.9,
+                child: CosWave(
+                  size: Size(MediaQuery.of(context).size.width, 80),
+                  xOffset: 45,
+                  yOffset: -5,
                 ),
               )
-            ],
+            ]),
           )),
       SizedBox(
-        height: 30,
+        height: 50,
       ),
       FadeAnimation(
           4,
           Row(
             children: [
-              LimitedBox(
-                maxWidth: 150,
-                child: RaisedButton(
-                  onPressed: () {
-                    launch("https://google.com/");
-                  },
-                  hoverColor: Coolors.accentBlue,
-                  shape: Vx.roundedSm,
-                  color: Coolors.accentColor.withOpacity(1),
-                  textColor: Coolors.primaryColor,
-                  child: "Resume"
-                      .text
-                      .bold
-                      .size(16)
-                      .textStyle(GoogleFonts.rajdhani())
-                      .make(),
-                ).h(40),
-              ).moveUpOnHover,
+              Resume(),
             ],
           )), // crossAlignment: CrossAxisAlignment.center,
     ]);

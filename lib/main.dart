@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: kPrimaryColor,
         accentColor: Coolors.accentColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        // textTheme: GoogleFonts.poppinsTextTheme()
       ),
       home: LayoutTemplate(),
     );

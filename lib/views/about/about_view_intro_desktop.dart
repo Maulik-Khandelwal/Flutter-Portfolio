@@ -4,6 +4,7 @@ import 'package:portfolio/Animations/FadeAnimation.dart';
 import 'package:portfolio/Colors/colors.dart';
 import 'package:portfolio/widgets/custom_text/custom_text.dart';
 import 'package:portfolio/extensions/hover_extensions.dart';
+import 'package:portfolio/widgets/resumeButton.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -67,6 +68,9 @@ class Introduction extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: ListView(children: <Widget>[
+        SizedBox(
+          height: 5,
+        ),
         FadeAnimation(
             1,
             "Who am I?"
@@ -79,7 +83,7 @@ class Introduction extends StatelessWidget {
                     ? context.screenWidth
                     : context.percentWidth * 40)),
         SizedBox(
-          height: 25,
+          height: 20,
         ),
         FadeAnimation(
             2,
@@ -93,7 +97,7 @@ class Introduction extends StatelessWidget {
                     ? context.screenWidth
                     : context.percentWidth * 40)),
         SizedBox(
-          height: 25,
+          height: 15,
         ),
         FadeAnimation(
             3,
@@ -213,24 +217,7 @@ class Introduction extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              LimitedBox(
-                maxWidth: 150,
-                child: RaisedButton(
-                  onPressed: () {
-                    launch("https://google.com/");
-                  },
-                  hoverColor: Coolors.accentBlue,
-                  shape: Vx.roundedSm,
-                  color: Coolors.accentColor.withOpacity(1),
-                  textColor: Coolors.primaryColor,
-                  child: "Resume"
-                      .text
-                      .bold
-                      .size(16)
-                      .textStyle(GoogleFonts.rajdhani())
-                      .make(),
-                ).h(40),
-              ).moveUpOnHover,
+              Resume(),
               // SizedBox(
               //   width: 20,
               // ),

@@ -12,10 +12,18 @@ class HomeContentDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          NameWidget(),
+          Padding(
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * 0.035),
+            child: NameWidget(),
+          ),
           Expanded(
-            child: Center(
-              child: IntroductionWidget(),
+            child: Padding(
+              padding: EdgeInsets.only(
+                  right: MediaQuery.of(context).size.width * 0.02),
+              child: Center(
+                child: IntroductionWidget(),
+              ),
             ),
           )
         ]);

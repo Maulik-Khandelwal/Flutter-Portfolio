@@ -22,39 +22,43 @@ class ProjectViewDesktop extends StatelessWidget {
         .bold
         .make()
         .shimmer();
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              // Color(0xFF7A7A7A),
-              // Color(0xFF616161),
-              Color(0xFF4A4A4A).withOpacity(0.7),
-              Color(0xFF333333).withOpacity(0.7),
-              Color(0xFF1E1E1E).withOpacity(0.7),
-              Color(0xFF050505).withOpacity(0.7),
-            ],
+    return Padding(
+      padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.04),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20.0),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                // Color(0xFF7A7A7A),
+                // Color(0xFF616161),
+                Color(0xFF4A4A4A).withOpacity(0.7),
+                Color(0xFF333333).withOpacity(0.7),
+                Color(0xFF1E1E1E).withOpacity(0.7),
+                Color(0xFF050505).withOpacity(0.7),
+              ],
+            ),
           ),
-        ),
-        width: 600,
-        height: 600,
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 15),
-          child: ListView(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: ProjectTitle,
+          width: 600,
+          height: 600,
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: ProjectTitle,
+                  ),
                 ),
-              ),
-              Projects(),
-            ],
+                Projects(),
+              ],
+            ),
           ),
         ),
       ),

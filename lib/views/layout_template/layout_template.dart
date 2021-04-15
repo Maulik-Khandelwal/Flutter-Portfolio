@@ -31,18 +31,16 @@ class LayoutTemplate extends StatelessWidget {
             PictureWidget(),
             Particle(size.height, size.width),
             Align(alignment: Alignment.bottomCenter, child: Footer()),
-            CenteredView(
-              child: Column(children: <Widget>[
-                NavigationBar(),
-                Expanded(
-                  child: Navigator(
-                    key: locator<NavigationService>().navigatorKey,
-                    onGenerateRoute: generateRoute,
-                    initialRoute: HomeRoute,
-                  ),
-                )
-              ]),
-            ),
+            Column(children: <Widget>[
+              NavigationBar(),
+              Expanded(
+                child: Navigator(
+                  key: locator<NavigationService>().navigatorKey,
+                  onGenerateRoute: generateRoute,
+                  initialRoute: HomeRoute,
+                ),
+              )
+            ]),
           ],
         ),
       ),
@@ -67,7 +65,7 @@ class PictureWidget extends StatelessWidget {
       desktop: Image(
         image: new AssetImage("assets/123.jpg"),
         fit: BoxFit.cover,
-        color: Colors.black87.withOpacity(0.72),
+        color: Colors.black87.withOpacity(0.70),
         colorBlendMode: BlendMode.darken,
       ),
     );
